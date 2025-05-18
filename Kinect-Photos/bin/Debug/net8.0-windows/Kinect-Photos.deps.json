@@ -1,0 +1,95 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "Kinect-Photos/1.0.0": {
+        "dependencies": {
+          "Microsoft.Kinect.Toolkit": "1.0.0",
+          "Microsoft.Kinect": "1.8.0.0",
+          "Microsoft.Kinect.Toolkit.Controls": "1.8.0.0",
+          "Microsoft.Kinect.Toolkit.Fusion": "1.8.0.0",
+          "Microsoft.Kinect.Toolkit.Interaction": "1.8.0.0"
+        },
+        "runtime": {
+          "Kinect-Photos.dll": {}
+        }
+      },
+      "Microsoft.Kinect.Toolkit/1.0.0": {
+        "runtime": {
+          "Microsoft.Kinect.Toolkit.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.8.0.0"
+          }
+        }
+      },
+      "Microsoft.Kinect/1.8.0.0": {
+        "runtime": {
+          "Microsoft.Kinect.dll": {
+            "assemblyVersion": "1.8.0.0",
+            "fileVersion": "1.8.0.595"
+          }
+        }
+      },
+      "Microsoft.Kinect.Toolkit.Controls/1.8.0.0": {
+        "runtime": {
+          "Microsoft.Kinect.Toolkit.Controls.dll": {
+            "assemblyVersion": "1.8.0.0",
+            "fileVersion": "1.8.0.572"
+          }
+        }
+      },
+      "Microsoft.Kinect.Toolkit.Fusion/1.8.0.0": {
+        "runtime": {
+          "Microsoft.Kinect.Toolkit.Fusion.dll": {
+            "assemblyVersion": "1.8.0.0",
+            "fileVersion": "1.8.0.572"
+          }
+        }
+      },
+      "Microsoft.Kinect.Toolkit.Interaction/1.8.0.0": {
+        "runtime": {
+          "Microsoft.Kinect.Toolkit.Interaction.dll": {
+            "assemblyVersion": "1.8.0.0",
+            "fileVersion": "1.8.0.572"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Kinect-Photos/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Microsoft.Kinect.Toolkit/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Microsoft.Kinect/1.8.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Microsoft.Kinect.Toolkit.Controls/1.8.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Microsoft.Kinect.Toolkit.Fusion/1.8.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Microsoft.Kinect.Toolkit.Interaction/1.8.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
