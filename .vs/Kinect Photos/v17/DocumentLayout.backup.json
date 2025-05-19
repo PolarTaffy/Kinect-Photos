@@ -3,32 +3,32 @@
   "WorkspaceRootPath": "C:\\Users\\cl672\\Documents\\Coding\\Csharp\\kPhotos\\Kinect Photos\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{92664CA3-E8E0-471D-BBF4-EE550F316224}|Kinect-Photos\\Kinect-Photos.csproj|c:\\users\\cl672\\documents\\coding\\csharp\\kphotos\\kinect photos\\kinect-photos\\gallerywindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{92664CA3-E8E0-471D-BBF4-EE550F316224}|Kinect-Photos\\Kinect-Photos.csproj|solutionrelative:kinect-photos\\gallerywindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{92664CA3-E8E0-471D-BBF4-EE550F316224}|Kinect-Photos\\Kinect-Photos.csproj|c:\\users\\cl672\\documents\\coding\\csharp\\kphotos\\kinect photos\\kinect-photos\\gallerywindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{92664CA3-E8E0-471D-BBF4-EE550F316224}|Kinect-Photos\\Kinect-Photos.csproj|solutionrelative:kinect-photos\\gallerywindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4508C4D1-85BB-4F3F-9E3B-CC93D231C65D}|Microsoft.Kinect.Toolkit.Controls\\Microsoft.Kinect.Toolkit.Controls.csproj|C:\\Users\\cl672\\Documents\\Coding\\Csharp\\kPhotos\\Kinect Photos\\microsoft.kinect.toolkit.controls\\kinectitemscontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4508C4D1-85BB-4F3F-9E3B-CC93D231C65D}|Microsoft.Kinect.Toolkit.Controls\\Microsoft.Kinect.Toolkit.Controls.csproj|solutionrelative:microsoft.kinect.toolkit.controls\\kinectitemscontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{92664CA3-E8E0-471D-BBF4-EE550F316224}|Kinect-Photos\\Kinect-Photos.csproj|c:\\users\\cl672\\documents\\coding\\csharp\\kphotos\\kinect photos\\kinect-photos\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{92664CA3-E8E0-471D-BBF4-EE550F316224}|Kinect-Photos\\Kinect-Photos.csproj|solutionrelative:kinect-photos\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{92664CA3-E8E0-471D-BBF4-EE550F316224}|Kinect-Photos\\Kinect-Photos.csproj|c:\\users\\cl672\\documents\\coding\\csharp\\kphotos\\kinect photos\\kinect-photos\\kinect-photos.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{92664CA3-E8E0-471D-BBF4-EE550F316224}|Kinect-Photos\\Kinect-Photos.csproj|solutionrelative:kinect-photos\\kinect-photos.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{92664CA3-E8E0-471D-BBF4-EE550F316224}|Kinect-Photos\\Kinect-Photos.csproj|c:\\users\\cl672\\documents\\coding\\csharp\\kphotos\\kinect photos\\kinect-photos\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{92664CA3-E8E0-471D-BBF4-EE550F316224}|Kinect-Photos\\Kinect-Photos.csproj|solutionrelative:kinect-photos\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{92664CA3-E8E0-471D-BBF4-EE550F316224}|Kinect-Photos\\Kinect-Photos.csproj|c:\\users\\cl672\\documents\\coding\\csharp\\kphotos\\kinect photos\\kinect-photos\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{92664CA3-E8E0-471D-BBF4-EE550F316224}|Kinect-Photos\\Kinect-Photos.csproj|solutionrelative:kinect-photos\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{92664CA3-E8E0-471D-BBF4-EE550F316224}|Kinect-Photos\\Kinect-Photos.csproj|c:\\users\\cl672\\documents\\coding\\csharp\\kphotos\\kinect photos\\kinect-photos\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{92664CA3-E8E0-471D-BBF4-EE550F316224}|Kinect-Photos\\Kinect-Photos.csproj|solutionrelative:kinect-photos\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{92664CA3-E8E0-471D-BBF4-EE550F316224}|Kinect-Photos\\Kinect-Photos.csproj|c:\\users\\cl672\\documents\\coding\\csharp\\kphotos\\kinect photos\\kinect-photos\\gallerywindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{92664CA3-E8E0-471D-BBF4-EE550F316224}|Kinect-Photos\\Kinect-Photos.csproj|solutionrelative:kinect-photos\\gallerywindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4508C4D1-85BB-4F3F-9E3B-CC93D231C65D}|Microsoft.Kinect.Toolkit.Controls\\Microsoft.Kinect.Toolkit.Controls.csproj|C:\\Users\\cl672\\Documents\\Coding\\Csharp\\kPhotos\\Kinect Photos\\microsoft.kinect.toolkit.controls\\kinectitemscontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4508C4D1-85BB-4F3F-9E3B-CC93D231C65D}|Microsoft.Kinect.Toolkit.Controls\\Microsoft.Kinect.Toolkit.Controls.csproj|solutionrelative:microsoft.kinect.toolkit.controls\\kinectitemscontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{92664CA3-E8E0-471D-BBF4-EE550F316224}|Kinect-Photos\\Kinect-Photos.csproj|c:\\users\\cl672\\documents\\coding\\csharp\\kphotos\\kinect photos\\kinect-photos\\kinect-photos.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{92664CA3-E8E0-471D-BBF4-EE550F316224}|Kinect-Photos\\Kinect-Photos.csproj|solutionrelative:kinect-photos\\kinect-photos.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4508C4D1-85BB-4F3F-9E3B-CC93D231C65D}|Microsoft.Kinect.Toolkit.Controls\\Microsoft.Kinect.Toolkit.Controls.csproj|C:\\Users\\cl672\\Documents\\Coding\\Csharp\\kPhotos\\Kinect Photos\\microsoft.kinect.toolkit.controls\\themes\\generic.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
@@ -42,24 +42,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "GalleryWindow.xaml.cs",
               "DocumentMoniker": "C:\\Users\\cl672\\Documents\\Coding\\Csharp\\kPhotos\\Kinect Photos\\Kinect-Photos\\GalleryWindow.xaml.cs",
               "RelativeDocumentMoniker": "Kinect-Photos\\GalleryWindow.xaml.cs",
-              "ToolTip": "C:\\Users\\cl672\\Documents\\Coding\\Csharp\\kPhotos\\Kinect Photos\\Kinect-Photos\\GalleryWindow.xaml.cs*",
-              "RelativeToolTip": "Kinect-Photos\\GalleryWindow.xaml.cs*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAADAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\cl672\\Documents\\Coding\\Csharp\\kPhotos\\Kinect Photos\\Kinect-Photos\\GalleryWindow.xaml.cs",
+              "RelativeToolTip": "Kinect-Photos\\GalleryWindow.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-19T07:10:33.53Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "GalleryWindow.xaml",
               "DocumentMoniker": "C:\\Users\\cl672\\Documents\\Coding\\Csharp\\kPhotos\\Kinect Photos\\Kinect-Photos\\GalleryWindow.xaml",
               "RelativeDocumentMoniker": "Kinect-Photos\\GalleryWindow.xaml",
@@ -71,7 +71,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "KinectItemsControl.cs",
               "DocumentMoniker": "C:\\Users\\cl672\\Documents\\Coding\\Csharp\\kPhotos\\Kinect Photos\\Microsoft.Kinect.Toolkit.Controls\\KinectItemsControl.cs",
               "RelativeDocumentMoniker": "Microsoft.Kinect.Toolkit.Controls\\KinectItemsControl.cs",
@@ -79,8 +79,7 @@
               "RelativeToolTip": "Microsoft.Kinect.Toolkit.Controls\\KinectItemsControl.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAABXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-18T18:48:29.607Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-18T18:48:29.607Z"
             },
             {
               "$type": "Document",
@@ -95,7 +94,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 3,
               "Title": "App.xaml",
               "DocumentMoniker": "C:\\Users\\cl672\\Documents\\Coding\\Csharp\\kPhotos\\Kinect Photos\\Kinect-Photos\\App.xaml",
               "RelativeDocumentMoniker": "Kinect-Photos\\App.xaml",
@@ -107,7 +106,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 2,
               "Title": "MainWindow.xaml.cs",
               "DocumentMoniker": "C:\\Users\\cl672\\Documents\\Coding\\Csharp\\kPhotos\\Kinect Photos\\Kinect-Photos\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "Kinect-Photos\\MainWindow.xaml.cs",
@@ -115,11 +114,12 @@
               "RelativeToolTip": "Kinect-Photos\\MainWindow.xaml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-18T16:28:56.315Z"
+              "WhenOpened": "2025-05-18T16:28:56.315Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "C:\\Users\\cl672\\Documents\\Coding\\Csharp\\kPhotos\\Kinect Photos\\Kinect-Photos\\MainWindow.xaml",
               "RelativeDocumentMoniker": "Kinect-Photos\\MainWindow.xaml",
@@ -131,7 +131,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "Kinect-Photos.csproj",
               "DocumentMoniker": "C:\\Users\\cl672\\Documents\\Coding\\Csharp\\kPhotos\\Kinect Photos\\Kinect-Photos\\Kinect-Photos.csproj",
               "RelativeDocumentMoniker": "Kinect-Photos\\Kinect-Photos.csproj",
