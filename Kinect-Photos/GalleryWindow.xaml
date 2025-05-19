@@ -1,0 +1,27 @@
+﻿<Window x:Class="Kinect_Photos.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:k="http://schemas.microsoft.com/kinect/2013"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Kinect_Photos"
+        mc:Ignorable="d"
+        Title="Window1" Height="450" Width="800">
+    <Grid>
+        <Grid Grid.Row="0"  Margin="603,0,10,329">
+            <k:KinectUserViewer k:KinectRegion.KinectRegion="{Binding ElementName=kinectRegion}" Height="100" HorizontalAlignment="Center" VerticalAlignment="Top" />
+            <k:KinectSensorChooserUI HorizontalAlignment="Center" VerticalAlignment="Top" Name="sensorChooserUi" />
+        </Grid>
+
+        <k:KinectRegion Grid.Row="1" x:Name="kinectRegion">
+            <!--Top Bar-->
+            
+            
+            <WrapPanel Margin="600,0,0,0" Width="200" Background="#FFFFE6E6"> <!-- This is the side panel for the options and whatnot-->
+                
+            </WrapPanel>
+            
+            
+        </k:KinectRegion>
+    </Grid>
+</Window>
