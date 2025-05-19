@@ -27,3 +27,6 @@ C:\Users\cl672\Documents\Coding\Csharp\kPhotos\Kinect Photos\Kinect-Photos\obj\D
 C:\Users\cl672\Documents\Coding\Csharp\kPhotos\Kinect Photos\Kinect-Photos\obj\Debug\net8.0-windows\Kinect-Photos.genruntimeconfig.cache
 C:\Users\cl672\Documents\Coding\Csharp\kPhotos\Kinect Photos\Kinect-Photos\obj\Debug\net8.0-windows\ref\Kinect-Photos.dll
 C:\Users\cl672\Documents\Coding\Csharp\kPhotos\Kinect Photos\Kinect-Photos\bin\Debug\net8.0-windows\Microsoft.Kinect.Toolkit.pdb
+C:\Users\cl672\Documents\Coding\Csharp\kPhotos\Kinect Photos\Kinect-Photos\obj\Debug\net8.0-windows\GalleryWindow.g.cs
+C:\Users\cl672\Documents\Coding\Csharp\kPhotos\Kinect Photos\Kinect-Photos\obj\Debug\net8.0-windows\GalleryWindow.baml
+C:\Users\cl672\Documents\Coding\Csharp\kPhotos\Kinect Photos\Kinect-Photos\obj\Debug\net8.0-windows\Kinect-Photos.sourcelink.json
