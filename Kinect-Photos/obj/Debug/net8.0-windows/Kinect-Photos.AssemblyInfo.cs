@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Kinect-Photos")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2562c943f36c5d674e9dc936ba99765dace0859e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+26f0bc2342801992eae045f2d290cf2957d12c98")]
 [assembly: System.Reflection.AssemblyProductAttribute("Kinect-Photos")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Kinect-Photos")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

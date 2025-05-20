@@ -434,6 +434,11 @@ namespace Microsoft.Kinect.Toolkit
                         newStatus |= ChooserStatus.SensorConflict;
                         continue;
                     }
+                    //catch (Exception e) //when idek what's going on
+                    //{
+                    //    newStatus |= ChooserStatus.SensorConflict;
+                    //    continue;
+                    //}
 
                     // Woo hoo, we have a started sensor.
                     newStatus = ChooserStatus.SensorStarted;

@@ -2,11 +2,11 @@
 <?xml-stylesheet type="text/xsl" href="c:\program files\microsoft visual studio\2022\community\team tools\static analysis tools\fxcop\Xml\CodeAnalysisReport.xsl"?>
 <FxCopReport Version="17.0">
  <Targets>
-  <Target Name="C:\Users\cl672\Documents\Coding\Csharp\Controls Basics\Microsoft.Kinect.Toolkit\bin\Debug\Microsoft.Kinect.Toolkit.dll">
+  <Target Name="C:\Users\cl672\Documents\Coding\Csharp\kPhotos\Kinect Photos\Microsoft.Kinect.Toolkit\bin\Debug\Microsoft.Kinect.Toolkit.dll">
    <Modules>
     <Module Name="microsoft.kinect.toolkit.dll">
      <Messages>
-      <Message TypeName="AssembliesShouldHaveValidStrongNames" Category="Microsoft.Design" CheckId="CA2210" Status="Active" Created="2025-05-18 13:19:51Z" FixCategory="NonBreaking">
+      <Message TypeName="AssembliesShouldHaveValidStrongNames" Category="Microsoft.Design" CheckId="CA2210" Status="Active" Created="2025-05-20 00:05:51Z" FixCategory="NonBreaking">
        <Issue Name="NoStrongName" Certainty="95" Level="CriticalError">Sign 'Microsoft.Kinect.Toolkit.dll' with a strong name key.</Issue>
       </Message>
      </Messages>
