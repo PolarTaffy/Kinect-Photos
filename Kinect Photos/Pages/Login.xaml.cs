@@ -20,7 +20,6 @@ namespace Kinect_Photos
     /// </summary>
     public partial class Login : Page
     {
-
         //replace array with a database or something idk
         User myUser = null;
         List<User> localUsers = new List<User>();
@@ -31,15 +30,7 @@ namespace Kinect_Photos
 
             this.sensorChooserUi.KinectSensorChooser = MainWindow.sensorChooser;
             //FIXME: The KinectSensorChooser appears blank
-
             loadProfiles();
-
-
-            
-
-
-
-
         }
 
         private void loadProfiles()

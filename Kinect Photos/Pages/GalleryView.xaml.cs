@@ -24,6 +24,28 @@ namespace Kinect_Photos
         {
             InitializeComponent();
 
+            //Initialize Menu Buttons
+            ChangeUserBtn.Click += (sender, args) =>
+            {
+                NavigationService.Navigate(new Login());
+            };
+
+            SettingsBtn.Click += (sender, args) =>
+            {
+                //NavigationService.Navigate(...);
+            };
+
+            LoadGalleryImages();
+
+            //TODO: Save user's last scroll position
+        }
+
+
+
+        private void LoadGalleryImages()
+        {
+
+            //Image Loader
             List<KinectTileButton> images = new List<KinectTileButton>();
             //create all image files
             for (int i = 0; i < 50; i++)
@@ -38,7 +60,7 @@ namespace Kinect_Photos
                 curImage.ImageSource = new BitmapImage(new Uri(imgsrc, UriKind.Relative));
                 curImage.Stretch = Stretch.UniformToFill;
                 button.Background = curImage;
-                
+
                 button.Click += (sender, args) =>
                 {
                     MessageBox.Show(index.ToString());
@@ -49,8 +71,6 @@ namespace Kinect_Photos
 
             }
             imageContainer.ItemsSource = images;
-
-            //TODO: Save user's last scroll position
         }
     }
 }
