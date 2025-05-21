@@ -10,25 +10,7 @@
 
     <Grid>
         <k:KinectRegion Grid.Row="1" x:Name="kinectRegion">
-            <Grid x:Name="kinectRegionGrid" Margin="10,20,10,20">
-                <StackPanel>
-                    <Grid Grid.Row="0" Width="NaN">
-                        <k:KinectUserViewer k:KinectRegion.KinectRegion="{Binding ElementName=kinectRegion}" Height="100" HorizontalAlignment="Center" VerticalAlignment="Top" ImageBackground="#FFDED2FF" />
-                        <k:KinectSensorChooserUI HorizontalAlignment="Center" VerticalAlignment="Top" Name="sensorChooserUi" />
-                    </Grid>
-                    <Label Content="Welcome to Kinect Photos." HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="36"/>
-                    <Label Content="Select a profile." HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Top" FontSize="20"/>
-                </StackPanel>
-                
-
-                <!--Managing Profile Images-->
-                <Grid HorizontalAlignment="Center" Margin="0,105,0,39" Height="250">
-                    <k:KinectTileButton x:Name="demoProfileBtn" VerticalAlignment="Top"></k:KinectTileButton>
-                    <Label VerticalAlignment="Bottom" HorizontalAlignment="Center" FontSize="16">Profile 1</Label>
-                </Grid>
-
-
-            </Grid>
+            <Frame Source="Login.xaml"/>
         </k:KinectRegion>
     </Grid>
 </Window>

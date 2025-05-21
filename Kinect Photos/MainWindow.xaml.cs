@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -23,34 +24,27 @@ namespace Kinect_Photos
     /// </summary>
     public partial class MainWindow : Window
     {
-        private readonly KinectSensorChooser sensorChooser;
+        public static KinectSensorChooser sensorChooser;
         private int[] ints;
         private User[] users = new User[5];
 
         public MainWindow()
         {
             InitializeComponent();
-
             //DEBUG PURPOSES
             //users[users.Length] = new User("Evan");
 
             // initialize the sensor chooser and UI
-            this.sensorChooser = new KinectSensorChooser();
-            this.sensorChooser.KinectChanged += SensorChooserOnKinectChanged;
-            this.sensorChooserUi.KinectSensorChooser = this.sensorChooser;
-            this.sensorChooser.Start();
+            sensorChooser = new KinectSensorChooser();
+            sensorChooser.KinectChanged += SensorChooserOnKinectChanged;
+            
+            sensorChooser.Start();
 
             // Bind the sensor chooser's current sensor to the KinectRegion
-            var regionSensorBinding = new Binding("Kinect") { Source = this.sensorChooser };
+            var regionSensorBinding = new Binding("Kinect") { Source = sensorChooser };
             BindingOperations.SetBinding(this.kinectRegion, KinectRegion.KinectSensorProperty, regionSensorBinding);
 
-            demoProfileBtn.Click += (sender, args) =>
-            {
-                //MessageBox.Show(users[0].ToString());
-                Window1 win = new Window1();
-                win.Show();
-                Close();
-            };
+
 
 
         }
