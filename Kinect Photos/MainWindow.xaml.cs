@@ -104,16 +104,6 @@ namespace Kinect_Photos
                 }
             }
         }
-
-        /// <summary>
-        /// Execute shutdown tasks
-        /// </summary>
-        /// <param name="sender">object sending the event</param>
-        /// <param name="e">event arguments</param>
-        private void WindowClosing(object sender, System.ComponentModel.CancelEventArgs e)
-        {
-            this.sensorChooser.Stop();
-        }
     }
 
     public class User

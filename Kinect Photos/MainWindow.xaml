@@ -9,16 +9,17 @@
         Title="MainWindow" Height="720" Width="1280" WindowState="Maximized">
 
     <Grid>
-        <Grid Grid.Row="0"  Margin="10 0 10 20">
-            <!-- <Image HorizontalAlignment="Left" VerticalAlignment="Bottom" Source="Images\Logo.png" Stretch="None" Margin="0 0 0 4"/> -->
-            <k:KinectUserViewer k:KinectRegion.KinectRegion="{Binding ElementName=kinectRegion}" Height="100" HorizontalAlignment="Center" VerticalAlignment="Top" />
-            <k:KinectSensorChooserUI HorizontalAlignment="Center" VerticalAlignment="Top" Name="sensorChooserUi" />
-        </Grid>
-
         <k:KinectRegion Grid.Row="1" x:Name="kinectRegion">
             <Grid x:Name="kinectRegionGrid" Margin="10,20,10,20">
-                <Label Content="Welcome to Kinect Photos." HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="36"/>
-                <Label Content="Select a profile." HorizontalAlignment="Center" Margin="0,46,0,0" VerticalAlignment="Top" FontSize="20"/>
+                <StackPanel>
+                    <Grid Grid.Row="0" Width="NaN">
+                        <k:KinectUserViewer k:KinectRegion.KinectRegion="{Binding ElementName=kinectRegion}" Height="100" HorizontalAlignment="Center" VerticalAlignment="Top" ImageBackground="#FFDED2FF" />
+                        <k:KinectSensorChooserUI HorizontalAlignment="Center" VerticalAlignment="Top" Name="sensorChooserUi" />
+                    </Grid>
+                    <Label Content="Welcome to Kinect Photos." HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="36"/>
+                    <Label Content="Select a profile." HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Top" FontSize="20"/>
+                </StackPanel>
+                
 
                 <!--Managing Profile Images-->
                 <Grid HorizontalAlignment="Center" Margin="0,105,0,39" Height="250">
