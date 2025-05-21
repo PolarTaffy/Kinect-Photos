@@ -100,21 +100,5 @@ namespace Kinect_Photos
         }
     }
 
-    public class User
-    {
-        String name;
-        Image profileImage;
-        public User()
-        {
-            name = "New Profile";
-            this.profileImage = new Image(); //TODO: Figure out how the hell to set up the images
-        }
-
-        public User(String userName)
-        {
-            this.name = userName;
-            this.profileImage = new Image();
-        }
-
-    }
+    
 }

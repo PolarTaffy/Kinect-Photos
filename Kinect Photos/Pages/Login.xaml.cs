@@ -20,6 +20,10 @@ namespace Kinect_Photos
     /// </summary>
     public partial class Login : Page
     {
+
+        //replace array with a database or something idk
+        User myUser = null;
+
         public Login()
         {
             InitializeComponent();
@@ -27,15 +31,22 @@ namespace Kinect_Photos
             this.sensorChooserUi.KinectSensorChooser = MainWindow.sensorChooser;
             //FIXME: The KinectSensorChooser appears blank
 
-            
+            loadProfiles();
 
             demoProfileBtn.Click += (sender, args) =>
             {
                 //MessageBox.Show(users[0].ToString());
-                Window1 win = new Window1();
-                win.Show();
+                //Window1 win = new Window1();
+                //win.Show();
                 //Close();
+                GalleryView galleryPage = new GalleryView();
+                NavigationService.Navigate(galleryPage);
             };
+        }
+
+        private void loadProfiles()
+        {
+
         }
     }
 }
