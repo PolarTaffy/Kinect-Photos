@@ -28,16 +28,25 @@ namespace Kinect_Photos
             //create all image files
             for (int i = 0; i < 50; i++)
             {
+                int index = i;
                 KinectTileButton button = new KinectTileButton();
                 button.HorizontalAlignment = HorizontalAlignment.Center;
                 button.VerticalAlignment = VerticalAlignment.Center;
 
                 ImageBrush curImage = new ImageBrush();
-                curImage.ImageSource = new BitmapImage(new Uri("testImages/dance.png", UriKind.Relative));
+                String imgsrc = "testImages/dance.png";
+                curImage.ImageSource = new BitmapImage(new Uri(imgsrc, UriKind.Relative));
                 curImage.Stretch = Stretch.UniformToFill;
                 button.Background = curImage;
                 
+                button.Click += (sender, args) =>
+                {
+                    MessageBox.Show(index.ToString());
+                    MessageBox.Show(imgsrc);
+                };
+
                 images.Add(button);
+
             }
             imageContainer.ItemsSource = images;
 
