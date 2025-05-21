@@ -122,23 +122,5 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
-  <ItemGroup>
-    <Resource Include="testImages\dummy_image_540x400_0.png" />
-    <Resource Include="testImages\dummy_image_540x400_1.png" />
-    <Resource Include="testImages\dummy_image_540x400_10.png" />
-    <Resource Include="testImages\dummy_image_540x400_11.png" />
-    <Resource Include="testImages\dummy_image_540x400_12.png" />
-    <Resource Include="testImages\dummy_image_540x400_13.png" />
-    <Resource Include="testImages\dummy_image_540x400_14.png" />
-    <Resource Include="testImages\dummy_image_540x400_15.png" />
-    <Resource Include="testImages\dummy_image_540x400_2.png" />
-    <Resource Include="testImages\dummy_image_540x400_3.png" />
-    <Resource Include="testImages\dummy_image_540x400_4.png" />
-    <Resource Include="testImages\dummy_image_540x400_5.png" />
-    <Resource Include="testImages\dummy_image_540x400_6.png" />
-    <Resource Include="testImages\dummy_image_540x400_7.png" />
-    <Resource Include="testImages\dummy_image_540x400_8.png" />
-    <Resource Include="testImages\dummy_image_540x400_9.png" />
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
