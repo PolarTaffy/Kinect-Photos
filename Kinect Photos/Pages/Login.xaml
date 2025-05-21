@@ -21,11 +21,14 @@
 
 
         <!--Managing Profile Images-->
-        <Grid HorizontalAlignment="Center" Margin="0,105,0,39" Height="250">
-            <k:KinectTileButton x:Name="demoProfileBtn" VerticalAlignment="Top"></k:KinectTileButton>
-            <Label VerticalAlignment="Bottom" HorizontalAlignment="Center" FontSize="16">Profile 1</Label>
-        </Grid>
-
+        <ItemsControl x:Name="Profiles" HorizontalAlignment="Center" Margin="0,105,0,39" Height="260" Width="1280">
+            <ItemsControl.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Height="260"/>
+                </ItemsPanelTemplate>
+            </ItemsControl.ItemsPanel>
+            
+        </ItemsControl>
 
     </Grid>
 </Page>

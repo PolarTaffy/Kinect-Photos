@@ -118,9 +118,14 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="res\user.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Resource Include="res\userIcon.png" />
     <Content Include="testImages\dance.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -23,6 +23,7 @@ namespace Kinect_Photos
 
         //replace array with a database or something idk
         User myUser = null;
+        List<User> localUsers = new List<User>();
 
         public Login()
         {
@@ -33,20 +34,72 @@ namespace Kinect_Photos
 
             loadProfiles();
 
-            demoProfileBtn.Click += (sender, args) =>
-            {
-                //MessageBox.Show(users[0].ToString());
-                //Window1 win = new Window1();
-                //win.Show();
-                //Close();
-                GalleryView galleryPage = new GalleryView();
-                NavigationService.Navigate(galleryPage);
-            };
+
+            
+
+
+
+
         }
 
         private void loadProfiles()
         {
+            List<StackPanel> profileTiles = new List<StackPanel>();
+            GalleryView galleryPage = new GalleryView();
 
+            //DEBUG: Add Demo Users
+            localUsers.Add(new User("Demo Profile 1"));
+            localUsers.Add(new User("Demo Profile 2"));
+            localUsers.Add(new User("Demo Profile 3"));
+
+            Console.WriteLine(localUsers.ToString());
+
+            foreach (User profile in localUsers) {
+                KinectTileButton profileTile = new KinectTileButton();
+
+                ImageBrush brush = new ImageBrush();
+                BitmapImage profileImg = profile.getProfileImage();
+                brush.ImageSource = profileImg;
+                brush.Stretch = Stretch.UniformToFill;
+                profileTile.Background = brush;
+
+                //Button - Functionality
+                profileTile.Click += (sender, args) =>
+                {
+                    //TODO: Make a function to actually like handle signing in
+                    NavigationService.Navigate(galleryPage);
+                };
+                
+                //Label
+                Label usernameLabel = new Label();
+                usernameLabel.Content = profile.getName();
+                usernameLabel.HorizontalAlignment = HorizontalAlignment.Center;
+                
+                StackPanel profilePanel = new StackPanel();
+                profilePanel.Children.Add(profileTile);
+                profilePanel.Children.Add(usernameLabel);
+
+
+                profileTiles.Add(profilePanel);
+
+            }
+
+            //New profile creation option
+            KinectTileButton newProfile = new KinectTileButton();
+            Label makeProfileLabel = new Label();
+            makeProfileLabel.Content = "Create Profile";
+            makeProfileLabel.HorizontalAlignment = HorizontalAlignment.Center;
+            newProfile.Click += (sender, args) =>
+            {
+                //TODO: Handle Navigation to Create Profile Screen
+            };
+            StackPanel addAccPanel = new StackPanel();
+            addAccPanel.Children.Add(newProfile);
+            addAccPanel.Children.Add(makeProfileLabel);
+            profileTiles.Add(addAccPanel); 
+
+            
+            Profiles.ItemsSource = profileTiles; 
         }
     }
 }
