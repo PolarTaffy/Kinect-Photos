@@ -12,5 +12,20 @@
         <k:KinectRegion Grid.Row="1" x:Name="kinectRegion">
             <Frame Source="Pages/Login.xaml" NavigationUIVisibility="Hidden"/>
         </k:KinectRegion>
+
+        <Grid x:Name="kinectUserPanel" Width="160" Height="100" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,15,15,0">
+            <Grid.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFE9E7E7" Offset="0.974"/>
+                    <GradientStop Color="White" Offset="0.481"/>
+                </LinearGradientBrush>
+            </Grid.Background>
+            <Border BorderBrush="#FFD4D4D4" BorderThickness="2,2,2,2" CornerRadius="4">
+                <k:KinectUserViewer Height="100" HorizontalAlignment="Center" VerticalAlignment="Top"  k:KinectRegion.KinectRegion="{Binding ElementName=kinectRegion}" />
+            </Border>
+            <k:KinectSensorChooserUI HorizontalAlignment="Center" VerticalAlignment="Top" Name="sensorChooserUi" />
+        </Grid>
     </Grid>
+
+
 </Window>

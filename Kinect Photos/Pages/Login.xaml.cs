@@ -28,7 +28,7 @@ namespace Kinect_Photos
         {
             InitializeComponent();
 
-            this.sensorChooserUi.KinectSensorChooser = MainWindow.sensorChooser;
+            //this.sensorChooserUi.KinectSensorChooser = MainWindow.sensorChooser;
             //FIXME: The KinectSensorChooser appears blank
             loadProfiles();
         }

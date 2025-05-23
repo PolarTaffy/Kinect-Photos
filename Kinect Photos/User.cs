@@ -13,12 +13,16 @@ namespace Kinect_Photos
         readonly String DEFAULT_PROFILE_IMG = "res/user.png";
         String name;
         BitmapImage profileImage;
+        List<String> photoDirectories;
+
         public User()
         {
             this.name = "New Profile";
             String imgsrc = String.Copy(DEFAULT_PROFILE_IMG);
             this.profileImage = new BitmapImage(new Uri(imgsrc, UriKind.Relative));
-
+            
+            this.photoDirectories = new List<String>();
+            this.photoDirectories.Add("C:/Users/cl672/Documents/Testing/sampleGallery");
         }
 
         public User(String userName)
@@ -26,6 +30,8 @@ namespace Kinect_Photos
             this.name = userName;
             String imgsrc = String.Copy(DEFAULT_PROFILE_IMG);
             this.profileImage = new BitmapImage(new Uri(imgsrc, UriKind.Relative));
+            this.photoDirectories = new List<String>();
+            this.photoDirectories.Add("C:/Users/cl672/Documents/Testing/sampleGallery");
 
         }
 
@@ -33,6 +39,8 @@ namespace Kinect_Photos
         {
             this.name = userName;
             this.profileImage = new BitmapImage(new Uri(imgPath, UriKind.RelativeOrAbsolute));
+            this.photoDirectories = new List<String>();
+            this.photoDirectories.Add("C:/Users/cl672/Documents/Testing/sampleGallery");
         }
 
         public String getName()
@@ -45,9 +53,26 @@ namespace Kinect_Photos
             return profileImage;
         }
 
+        public List<String> getImageDirectories()
+        {
+            return this.photoDirectories;
+        }
+
         public void setName(String newName)
         {
             this.name = newName;
         }
+
+        public void setProfileImage(String imgPath)
+        {
+            this.profileImage = new BitmapImage(new Uri(imgPath, UriKind.Absolute));
+        }
+
+        public void addImgDirectory(String imgPath)
+        {
+            //TODO: Handle verifying the validity of it
+            this.photoDirectories.Add(imgPath);
+        }
+
     }
 }

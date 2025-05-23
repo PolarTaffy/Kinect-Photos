@@ -1,7 +1,9 @@
 ﻿using Microsoft.Kinect.Toolkit.Controls;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -42,33 +44,38 @@ namespace Kinect_Photos
 
 
 
-        private void LoadGalleryImages()
-        {
+        private void LoadGalleryImages() //For large galleries, this takes a while... consider segmenting this in the future where it generates more as you scroll?
+        { //Also, have images saved or organized by date?
 
-            //Image Loader
+            //FIXME: Get current user
+            User curUser = new User("Ralphie");
+
+            //Get user directory
             List<KinectTileButton> images = new List<KinectTileButton>();
-            //create all image files
-            for (int i = 0; i < 50; i++)
+
+            foreach (String directory in curUser.getImageDirectories())
             {
-                int index = i;
-                KinectTileButton button = new KinectTileButton();
-                button.HorizontalAlignment = HorizontalAlignment.Center;
-                button.VerticalAlignment = VerticalAlignment.Center;
-
-                ImageBrush curImage = new ImageBrush();
-                String imgsrc = "testImages/dance.png";
-                curImage.ImageSource = new BitmapImage(new Uri(imgsrc, UriKind.Relative));
-                curImage.Stretch = Stretch.UniformToFill;
-                button.Background = curImage;
-
-                button.Click += (sender, args) =>
+                String[] extensions = new[] { "*.png", "*.jpg", "*.jpeg", "*.bmp", "*.gif" };
+                var imageFiles = extensions.SelectMany(ext => Directory.GetFiles(directory, ext)).ToList();
+                foreach (String imgsrc in imageFiles)
                 {
-                    MessageBox.Show(index.ToString());
-                    MessageBox.Show(imgsrc);
-                };
 
-                images.Add(button);
+                    KinectTileButton button = new KinectTileButton();
+                    button.HorizontalAlignment = HorizontalAlignment.Center;
+                    button.VerticalAlignment = VerticalAlignment.Center;
 
+                    ImageBrush curImage = new ImageBrush();
+                    curImage.ImageSource = new BitmapImage(new Uri(imgsrc, UriKind.Relative));
+                    curImage.Stretch = Stretch.UniformToFill;
+                    button.Background = curImage;
+
+                    button.Click += (sender, args) =>
+                    {
+                        NavigationService.Navigate(new imageView(imgsrc, "hello"));
+                    };
+
+                    images.Add(button);
+                }
             }
             imageContainer.ItemsSource = images;
         }
