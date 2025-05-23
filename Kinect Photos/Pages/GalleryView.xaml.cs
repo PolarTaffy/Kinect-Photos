@@ -27,7 +27,7 @@ namespace Kinect_Photos
             InitializeComponent();
 
             //Initialize Menu Buttons
-            ChangeUserBtn.Click += (sender, args) =>
+            /*ChangeUserBtn.Click += (sender, args) =>
             {
                 NavigationService.Navigate(new Login());
             };
@@ -35,7 +35,7 @@ namespace Kinect_Photos
             SettingsBtn.Click += (sender, args) =>
             {
                 //NavigationService.Navigate(...);
-            };
+            };*/
 
             LoadGalleryImages();
 

@@ -8,61 +8,76 @@
       mc:Ignorable="d" 
       d:DesignHeight="720" d:DesignWidth="1280"
       Title="GalleryView">
+    <Page.Resources>
+        <!-- Base KinectTileButton Style -->
+        <Style TargetType="{x:Type k:KinectTileButton}" x:Key="NavButtonStyle">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type k:KinectTileButton}">
+                        <Border x:Name="Border"
+                                Background="{TemplateBinding Background}"
+                                CornerRadius="20"
+                                Padding="10"
+                                SnapsToDevicePixels="True">
+                            <ContentPresenter HorizontalAlignment="Center"
+                                              VerticalAlignment="Center"
+                                              TextElement.Foreground="White"
+                                              TextElement.FontWeight="Bold" />
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="Border" Property="Background" Value="#99FFFFFF"/>
+                                <Setter TargetName="Border" Property="Effect">
+                                    <Setter.Value>
+                                        <DropShadowEffect BlurRadius="10" Color="White" ShadowDepth="0"/>
+                                    </Setter.Value>
+                                </Setter>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter TargetName="Border" Property="Background" Value="#CCFFFFFF"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="Width" Value="110"/>
+            <Setter Property="Height" Value="40"/>
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="Background" Value="Transparent"/>
+        </Style>
+
+        <!-- Selected (Watch Now) Style -->
+        <Style TargetType="{x:Type k:KinectTileButton}" BasedOn="{StaticResource NavButtonStyle}" x:Key="SelectedNavButtonStyle">
+            <Setter Property="Background" Value="#DDDDDD"/>
+            <Setter Property="Foreground" Value="#444"/>
+        </Style>
+    </Page.Resources>
 
     <Grid Background="White">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="60"/>
-            <!-- Top bar -->
-            <RowDefinition Height="*"/>
-            <!-- Content -->
-        </Grid.RowDefinitions>
-
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"/>
-            <!-- Photo grid -->
-            <ColumnDefinition Width="250"/>
-            <!-- Sidebar -->
-        </Grid.ColumnDefinitions>
-
-
-        <!-- Top Bar -->
-        <DockPanel Background="#EEEEEE" VerticalAlignment="Center" LastChildFill="True" Margin="10,0,5,0" Height="50">
-            <TextBlock Text="Photos" FontSize="24" FontWeight="Bold" VerticalAlignment="Center" Margin="10,0,5,0" />
-            <k:KinectTileButton Height="50" Margin="0" Label="Albums" FontSize="20" VerticalAlignment="Center" HorizontalLabelAlignment="Center" HorizontalAlignment="Left" FontWeight="Bold" Background="#FF7931FF"/>
-            <k:KinectTileButton Height="50" Margin="0" Label="Memories" FontSize="20" VerticalAlignment="Center" HorizontalLabelAlignment="Center" HorizontalAlignment="Left" FontWeight="Bold" Background="#FF7931FF"/>
-        </DockPanel>
-
-        <!-- Photo Grid -->
-        <k:KinectScrollViewer Grid.Row="1" Grid.Column="0" Margin="0" VerticalScrollBarVisibility="Hidden">
+        <!-- Photo Grid (fills entire area) -->
+        <k:KinectScrollViewer VerticalScrollBarVisibility="Hidden"
+                              Width="Auto" Height="Auto">
             <ItemsControl x:Name="imageContainer">
                 <ItemsControl.ItemsPanel>
                     <ItemsPanelTemplate>
-                        <WrapPanel Orientation="Horizontal" ItemWidth="160" ItemHeight="160" />
+                        <WrapPanel Orientation="Horizontal" ItemWidth="200" ItemHeight="200" Margin="0"/>
                     </ItemsPanelTemplate>
                 </ItemsControl.ItemsPanel>
-
+                
+                <!-- Your items go here -->
             </ItemsControl>
         </k:KinectScrollViewer>
 
-        <!-- Sidebar -->
-        <StackPanel Grid.Column="1" Margin="10,-8,10,10" Grid.RowSpan="2">
-            <!--Kinect Sensor-->
-            
-            <!--Search Bar-->
-            <Border BorderBrush="#FF000000" BorderThickness="1" CornerRadius="8" Margin="0 10 0 0">
-                <TextBox Height="30" BorderBrush="{x:Null}" Background="{x:Null}" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="18" FontStyle="Italic">Search...</TextBox>
-            </Border>
-
-            <Separator Margin="0,10"/>
-
-            <!--Settings Buttons-->
-            <Border BorderBrush="#FF000000" BorderThickness="1" CornerRadius="8" Margin="0 10 0 0">
-                <k:KinectCircleButton x:Name="SettingsBtn" Height="25" Label="Settings" VerticalAlignment="Center" LabelPosition="Right" Width="220" FontSize="35791" Margin="0,5,0,5"/>
-            </Border>
-            <Border BorderBrush="#FF000000" BorderThickness="1" CornerRadius="8" Margin="0 10 0 0">
-                <k:KinectCircleButton x:Name="ChangeUserBtn" Height="25" Label="Change User" VerticalAlignment="Center" LabelPosition="Right" Width="220" FontSize="35791" Margin="0,5,0,5"/>
-            </Border>
-        </StackPanel>
-
+        <!-- Navbar overlay -->
+        <Border Background="#99000000" CornerRadius="25" Margin="10" Height="50"
+                VerticalAlignment="Top" HorizontalAlignment="Center"
+                Panel.ZIndex="1">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <k:KinectTileButton Content="Photos" Style="{StaticResource SelectedNavButtonStyle}"/>
+                <k:KinectTileButton Content="Albums" Style="{StaticResource NavButtonStyle}"/>
+                <k:KinectTileButton Content="Memories" Style="{StaticResource NavButtonStyle}"/>
+            </StackPanel>
+        </Border>
     </Grid>
 </Page>
