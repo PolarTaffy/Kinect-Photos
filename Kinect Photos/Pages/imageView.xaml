@@ -37,7 +37,7 @@
             <!-- For zooming in and out, use grabbed fist and bring it further and back-->
         </k:KinectScrollViewer>
 
-        <!--<Label x:Name="zoomEnabledIndicator" FontSize="18" HorizontalAlignment="Left" VerticalAlignment="Top">Zoom Mode = OFF</Label>-->
+        <Label x:Name="zoomEnabledIndicator" FontSize="18" HorizontalAlignment="Left" VerticalAlignment="Top">Zoom Mode = OFF</Label>
 
     </Grid>
 </Page>

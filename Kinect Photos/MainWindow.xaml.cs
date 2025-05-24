@@ -27,12 +27,12 @@ namespace Kinect_Photos
         public static KinectSensorChooser sensorChooser;
         private int[] ints;
         private User[] users = new User[5];
+        public InteractionStream interactionStream;
+        private static KinectRegion curKinectRegion;
 
         public MainWindow()
         {
             InitializeComponent();
-            //DEBUG PURPOSES
-            //users[users.Length] = new User("Evan");
 
             // initialize the sensor chooser and UI
             sensorChooser = new KinectSensorChooser();
@@ -40,13 +40,25 @@ namespace Kinect_Photos
             
             sensorChooser.Start();
 
+            curKinectRegion = this.kinectRegion;
+
             // Bind the sensor chooser's current sensor to the KinectRegion
             var regionSensorBinding = new Binding("Kinect") { Source = sensorChooser };
             BindingOperations.SetBinding(this.kinectRegion, KinectRegion.KinectSensorProperty, regionSensorBinding);
 
 
-
-
+        public static Boolean isHandGripped()
+        {
+            //curKinectRegion is null
+            var primaryHandPointer = curKinectRegion.HandPointers.FirstOrDefault(handPointer => handPointer.IsPrimaryUser && handPointer.IsPrimaryHandOfUser); //this is inneficient we can prob just update it when it changes, but that's a lot of extra code
+            if (primaryHandPointer != null)
+            {
+                return primaryHandPointer.IsInGripInteraction;
+            }
+            else
+            {
+                return false;
+            }
         }
 
         /// <summary>

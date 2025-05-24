@@ -47,7 +47,7 @@
             <Setter Property="Background" Value="Transparent"/>
         </Style>
 
-        <!-- Selected (Watch Now) Style -->
+        <!-- Selected Item Style -->
         <Style TargetType="{x:Type k:KinectTileButton}" BasedOn="{StaticResource NavButtonStyle}" x:Key="SelectedNavButtonStyle">
             <Setter Property="Background" Value="#DDDDDD"/>
             <Setter Property="Foreground" Value="#444"/>
@@ -55,19 +55,6 @@
     </Page.Resources>
 
     <Grid Background="White">
-        <!-- Photo Grid (fills entire area) -->
-        <k:KinectScrollViewer VerticalScrollBarVisibility="Hidden"
-                              Width="Auto" Height="Auto">
-            <ItemsControl x:Name="imageContainer">
-                <ItemsControl.ItemsPanel>
-                    <ItemsPanelTemplate>
-                        <WrapPanel Orientation="Horizontal" ItemWidth="200" ItemHeight="200" Margin="0"/>
-                    </ItemsPanelTemplate>
-                </ItemsControl.ItemsPanel>
-                
-                <!-- Your items go here -->
-            </ItemsControl>
-        </k:KinectScrollViewer>
 
         <!-- Navbar overlay -->
         <Border Background="#99000000" CornerRadius="25" Margin="10" Height="50"
@@ -79,5 +66,28 @@
                 <k:KinectTileButton Content="Memories" Style="{StaticResource NavButtonStyle}"/>
             </StackPanel>
         </Border>
+
+
+        <!-- Photo Grid (Busted & Broken) -->
+        <k:KinectScrollViewer VerticalScrollBarVisibility="Hidden"
+                              Width="Auto" Height="Auto">
+            <ItemsControl x:Name="imageContainer" VerticalAlignment="Top">
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <WrapPanel Orientation="Horizontal" ItemWidth="200" ItemHeight="200" Margin="0"/>
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+
+                <!--<k:KinectTileButton></k:KinectTileButton>-->
+            </ItemsControl>
+        </k:KinectScrollViewer>
+
+
+        <!-- Menu Button! -->
+        <k:KinectCircleButton x:Name="menuBtn" HorizontalAlignment="Right" VerticalAlignment="Bottom" Width="120" Height="120" Grid.Row="5" FontSize="72" FontWeight="Normal" ContentForeground="Black" Foreground="#7F000000" Content="☰" Background="{x:Null}"/>
+
+        <!-- Use adorners for the menu-->
+
+
     </Grid>
 </Page>
