@@ -37,7 +37,7 @@ namespace Kinect_Photos
             // initialize the sensor chooser and UI
             sensorChooser = new KinectSensorChooser();
             sensorChooser.KinectChanged += SensorChooserOnKinectChanged;
-            
+
             sensorChooser.Start();
 
             curKinectRegion = this.kinectRegion;
@@ -46,19 +46,11 @@ namespace Kinect_Photos
             var regionSensorBinding = new Binding("Kinect") { Source = sensorChooser };
             BindingOperations.SetBinding(this.kinectRegion, KinectRegion.KinectSensorProperty, regionSensorBinding);
 
+        }
 
-        public static Boolean isHandGripped()
+        public static HandPointer getHandPointer()
         {
-            //curKinectRegion is null
-            var primaryHandPointer = curKinectRegion.HandPointers.FirstOrDefault(handPointer => handPointer.IsPrimaryUser && handPointer.IsPrimaryHandOfUser); //this is inneficient we can prob just update it when it changes, but that's a lot of extra code
-            if (primaryHandPointer != null)
-            {
-                return primaryHandPointer.IsInGripInteraction;
-            }
-            else
-            {
-                return false;
-            }
+            return curKinectRegion.HandPointers.FirstOrDefault(handPointer => handPointer.IsPrimaryUser && handPointer.IsPrimaryHandOfUser);
         }
 
         /// <summary>
