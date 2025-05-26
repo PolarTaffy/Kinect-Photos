@@ -27,16 +27,10 @@ namespace Kinect_Photos
         {
             InitializeComponent();
 
-            //Initialize Menu Buttons
-            /*ChangeUserBtn.Click += (sender, args) =>
-            {
-                NavigationService.Navigate(new Login());
-            };
-
-            SettingsBtn.Click += (sender, args) =>
+            menuBtn.Click += (sender, args) =>
             {
                 //NavigationService.Navigate(...);
-            };*/
+            };
 
             LoadGalleryImages();
 
@@ -81,8 +75,9 @@ namespace Kinect_Photos
                 {
 
                     KinectTileButton button = new KinectTileButton();
-                    button.HorizontalAlignment = HorizontalAlignment.Center;
-                    button.VerticalAlignment = VerticalAlignment.Center;
+                    // Changed HorizontalAlignment and VerticalAlignment to Stretch
+                    button.HorizontalAlignment = HorizontalAlignment.Stretch;
+                    button.VerticalAlignment = VerticalAlignment.Stretch;
 
                     ImageBrush curImage = new ImageBrush();
                     curImage.ImageSource = new BitmapImage(new Uri(imgsrc, UriKind.Relative));
@@ -93,12 +88,15 @@ namespace Kinect_Photos
                     {
                         NavigationService.Navigate(new imageView(imgsrc, "hello"));
                     };
-                    button.Margin = new Thickness(2);
+                    button.Margin = new Thickness(0);
 
                     images.Add(button);
                 }
             }
             imageContainer.ItemsSource = images;
+            //TODO: Resize imageGrid's columns/rows to increase or decrease scale or to make photo previews square/vertical
+
+            //OR in the future have VARIED image preview dimensions/sizes to look really pretty
         }
     }
 }

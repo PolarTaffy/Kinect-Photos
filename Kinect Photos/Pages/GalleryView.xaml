@@ -74,8 +74,7 @@
             <ItemsControl x:Name="imageContainer" VerticalAlignment="Top">
                 <ItemsControl.ItemsPanel>
                     <ItemsPanelTemplate>
-                        
-                        <WrapPanel Orientation="Horizontal" ItemWidth="200" ItemHeight="200" Margin="0"/>
+                        <UniformGrid x:Name="imageGrid" Columns="8" />
                     </ItemsPanelTemplate>
                 </ItemsControl.ItemsPanel>
 

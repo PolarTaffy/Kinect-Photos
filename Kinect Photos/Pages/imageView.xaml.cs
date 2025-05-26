@@ -60,23 +60,16 @@ namespace Kinect_Photos
             {
                 if (hp != null && hp.IsInGripInteraction)
                 {
-                    String output = "Hand is gripped! ";
                     prevHandDistance = curHandDistance;
                     curHandDistance = hp.PressExtent;
-
-                    output += curHandDistance; //PressExtent seems to be from a range of 0 to 5
-                    zoomEnabledIndicator.Content = output;
 
                     double changeHandDist = prevHandDistance - curHandDistance;
 
                     ImageScaleTransform.ScaleX *= (1 + changeHandDist/5);
                     ImageScaleTransform.ScaleY *= (1 + changeHandDist/5); //sensible-ish scrolling
-
-
                 }
-                else
+                else if (hp != null)
                 {
-                    zoomEnabledIndicator.Content = "Hand is not gripped!";
                     prevHandDistance = curHandDistance;
                     curHandDistance = hp.PressExtent;
 
