@@ -25,15 +25,13 @@
             </k:KinectCircleButton>
         </Grid>
 
-        <k:KinectScrollViewer VerticalScrollBarVisibility="Hidden" x:Name="scrollviewer">
+        <k:KinectScrollViewer VerticalScrollBarVisibility="Hidden" HorizontalScrollBarVisibility="Hidden" x:Name="scrollviewer">
             <!-- To scroll around a zoomed image-->
-            <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
-                <Image x:Name="image" Stretch="Uniform" Source="/testImages/sunflower_large.jpeg" HorizontalAlignment="Center" VerticalAlignment="Center">
-                    <Image.RenderTransform>
-                        <ScaleTransform x:Name="ImageScaleTransform" ScaleX=".9" ScaleY=".9"/>
-                    </Image.RenderTransform>
-                </Image>
-            </Grid>
+            <Image x:Name="image" Stretch="Uniform" Source="/testImages/sunflower_large.jpeg">
+                <Image.RenderTransform>
+                    <ScaleTransform x:Name="ImageScaleTransform" ScaleX=".9" ScaleY=".9"/>
+                </Image.RenderTransform>
+            </Image>
             <!-- For zooming in and out, use grabbed fist and bring it further and back-->
         </k:KinectScrollViewer>
 

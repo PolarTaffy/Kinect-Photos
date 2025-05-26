@@ -14,6 +14,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 
 namespace Kinect_Photos
 {
@@ -40,9 +41,28 @@ namespace Kinect_Photos
             LoadGalleryImages();
 
             //TODO: Save user's last scroll position
+            HandleTopMenuVisibility();
         }
 
+        private void HandleTopMenuVisibility()
+        {
+            //we're gonna track the handpointer position and see if it's on the top half
+            HandPointer pt = MainWindow.getHandPointer();
 
+            DispatcherTimer handPosTimer = new DispatcherTimer();
+            handPosTimer.Interval = TimeSpan.FromMilliseconds(100);
+            handPosTimer.Tick += (sender, args) =>
+            {
+                pt.GetPosition(this);
+                //Handle Menu Visibility
+                Point menuPos = pt.GetPosition(menuBtn);
+                if (!(menuPos.X >= 0 && menuPos.X <= menuBtn.ActualWidth && menuPos.Y >= 0 && menuPos.Y <= menuBtn.ActualHeight))
+                {
+                    //pointer isn't on menu
+                }
+            };
+
+        }
 
         private void LoadGalleryImages() //For large galleries, this takes a while... consider segmenting this in the future where it generates more as you scroll?
         { //Also, have images saved or organized by date?
@@ -73,6 +93,7 @@ namespace Kinect_Photos
                     {
                         NavigationService.Navigate(new imageView(imgsrc, "hello"));
                     };
+                    button.Margin = new Thickness(2);
 
                     images.Add(button);
                 }

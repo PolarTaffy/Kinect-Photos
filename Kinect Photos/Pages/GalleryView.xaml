@@ -22,7 +22,7 @@
                             <ContentPresenter HorizontalAlignment="Center"
                                               VerticalAlignment="Center"
                                               TextElement.Foreground="White"
-                                              TextElement.FontWeight="Bold" />
+                                              TextElement.FontWeight="Normal" />
                         </Border>
                         <ControlTemplate.Triggers>
                             <Trigger Property="IsMouseOver" Value="True">
@@ -59,7 +59,7 @@
         <!-- Navbar overlay -->
         <Border Background="#99000000" CornerRadius="25" Margin="10" Height="50"
                 VerticalAlignment="Top" HorizontalAlignment="Center"
-                Panel.ZIndex="1">
+                Panel.ZIndex="1" x:Name="NavBar">
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
                 <k:KinectTileButton Content="Photos" Style="{StaticResource SelectedNavButtonStyle}"/>
                 <k:KinectTileButton Content="Albums" Style="{StaticResource NavButtonStyle}"/>
@@ -74,6 +74,7 @@
             <ItemsControl x:Name="imageContainer" VerticalAlignment="Top">
                 <ItemsControl.ItemsPanel>
                     <ItemsPanelTemplate>
+                        
                         <WrapPanel Orientation="Horizontal" ItemWidth="200" ItemHeight="200" Margin="0"/>
                     </ItemsPanelTemplate>
                 </ItemsControl.ItemsPanel>
