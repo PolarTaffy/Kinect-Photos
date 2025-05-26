@@ -10,6 +10,7 @@
       Title="imageView">
 
     <Grid Background="White">
+        
 
         <!--add left and right button, with left & right images, we may wanna import them later-->
         <!--drag entire photo down to exit?-->
@@ -25,9 +26,13 @@
             </k:KinectCircleButton>
         </Grid>
 
-        <k:KinectScrollViewer VerticalScrollBarVisibility="Hidden" HorizontalScrollBarVisibility="Hidden" x:Name="scrollviewer">
+        <k:KinectScrollViewer VerticalScrollBarVisibility="Hidden" HorizontalScrollBarVisibility="Hidden" x:Name="scrollviewer"
+                              HorizontalContentAlignment="Center" VerticalContentAlignment="Center">
             <!-- To scroll around a zoomed image-->
             <Image x:Name="image" Stretch="Uniform" Source="/testImages/sunflower_large.jpeg">
+                <Image.RenderTransformOrigin>
+                    <Point X="0.5" Y="0.5"/>
+                </Image.RenderTransformOrigin>
                 <Image.RenderTransform>
                     <ScaleTransform x:Name="ImageScaleTransform" ScaleX=".9" ScaleY=".9"/>
                 </Image.RenderTransform>
