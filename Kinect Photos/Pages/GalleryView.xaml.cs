@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Reflection;
+using System.Security.Policy;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -11,10 +12,12 @@ using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
+using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Windows.Threading;
+using static System.Net.WebRequestMethods;
 
 namespace Kinect_Photos
 {
@@ -60,6 +63,13 @@ namespace Kinect_Photos
 
         private void LoadGalleryImages() //For large galleries, this takes a while... consider segmenting this in the future where it generates more as you scroll?
         { //Also, have images saved or organized by date?
+
+
+            //Index all files BY MONTH in a database
+            //Load each one of them separated, and by month
+            //Whenever you load, you just check if there are any more new files
+            //Keeps everything in memory
+            //Figure out how to cache things???
 
             //FIXME: Get current user
             User curUser = new User("Ralphie");

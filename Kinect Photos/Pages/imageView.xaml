@@ -1,5 +1,5 @@
 ﻿<Page x:Class="Kinect_Photos.imageView"
-            xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
@@ -39,8 +39,5 @@
             </Image>
             <!-- For zooming in and out, use grabbed fist and bring it further and back-->
         </k:KinectScrollViewer>
-
-        <Label x:Name="zoomEnabledIndicator" FontSize="18" HorizontalAlignment="Left" VerticalAlignment="Top">Zoom Mode = OFF</Label>
-
     </Grid>
 </Page>
