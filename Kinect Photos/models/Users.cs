@@ -7,8 +7,8 @@ namespace Kinect_Photos.models
 {
     public class Users
     {
-        public String userName;
-        public int userID;
-        public String pfpPath;
+        public int userID { get; set; }
+        public string userName { get; set; }
+        public string pfpPath { get; set; }
     }
 }

@@ -7,7 +7,7 @@ namespace Kinect_Photos.models
 {
     public class folderPaths
     {
-        public String folderPath;
-        public int userID;
+        public String folderPath { get; set; }
+        public int userID { get; set; }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SQLite;
 using System.IO;
 using System.Linq;
@@ -14,6 +15,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Dapper;
 using Microsoft.Kinect;
 using Microsoft.Kinect.Toolkit;
 using Microsoft.Kinect.Toolkit.Controls;
@@ -52,6 +54,13 @@ namespace Kinect_Photos
             if (!File.Exists("kinectPhotos.db")) { SQLiteConnection.CreateFile("kinectPhotos.db"); }
             DatabaseHelper.initializeDatabase();
 
+            using (IDbConnection connection = DatabaseHelper.GetDbConnection())
+            {
+                connection.Open();
+                string sql = File.ReadAllText("scripts/testPopulate.sql");
+                connection.Execute(sql);
+            }
+
         }
 
         public static HandPointer getHandPointer()
@@ -59,11 +68,7 @@ namespace Kinect_Photos
             return curKinectRegion.HandPointers.FirstOrDefault(handPointer => handPointer.IsPrimaryUser && handPointer.IsPrimaryHandOfUser);
         }
 
-        /// <summary>
-        /// Called when the KinectSensorChooser gets a new sensor
-        /// </summary>
-        /// <param name="sender">sender of the event</param>
-        /// <param name="args">event arguments</param>
+        /// Handles New Kinect Sensors
         private static void SensorChooserOnKinectChanged(object sender, KinectChangedEventArgs args)
         {
             if (args.OldSensor != null)

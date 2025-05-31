@@ -158,7 +158,10 @@
     <Resource Include="testImages\sunflower_large.jpeg" />
     <Resource Include="res\userIcon.png" />
     <None Include="scripts\createTables.sql">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="scripts\testPopulate.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <Content Include="testImages\dance.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
