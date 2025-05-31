@@ -3,20 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\cl672\\Documents\\Coding\\Csharp\\Kinect Photos\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CAFB0E7B-6070-4615-9DBC-5BA77F141F48}|Kinect Photos\\Kinect Photos.csproj|c:\\users\\cl672\\documents\\coding\\csharp\\kinect photos\\kinect photos\\pages\\login.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CAFB0E7B-6070-4615-9DBC-5BA77F141F48}|Kinect Photos\\Kinect Photos.csproj|solutionrelative:kinect photos\\pages\\login.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CAFB0E7B-6070-4615-9DBC-5BA77F141F48}|Kinect Photos\\Kinect Photos.csproj|c:\\users\\cl672\\documents\\coding\\csharp\\kinect photos\\kinect photos\\models\\users.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CAFB0E7B-6070-4615-9DBC-5BA77F141F48}|Kinect Photos\\Kinect Photos.csproj|solutionrelative:kinect photos\\models\\users.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CAFB0E7B-6070-4615-9DBC-5BA77F141F48}|Kinect Photos\\Kinect Photos.csproj|c:\\users\\cl672\\documents\\coding\\csharp\\kinect photos\\kinect photos\\scripts\\testpopulate.sql||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{CAFB0E7B-6070-4615-9DBC-5BA77F141F48}|Kinect Photos\\Kinect Photos.csproj|solutionrelative:kinect photos\\scripts\\testpopulate.sql||{3B902123-F8A7-4915-9F01-361F908088D0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CAFB0E7B-6070-4615-9DBC-5BA77F141F48}|Kinect Photos\\Kinect Photos.csproj|c:\\users\\cl672\\documents\\coding\\csharp\\kinect photos\\kinect photos\\scripts\\createtables.sql||{3B902123-F8A7-4915-9F01-361F908088D0}",
       "RelativeMoniker": "D:0:0:{CAFB0E7B-6070-4615-9DBC-5BA77F141F48}|Kinect Photos\\Kinect Photos.csproj|solutionrelative:kinect photos\\scripts\\createtables.sql||{3B902123-F8A7-4915-9F01-361F908088D0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CAFB0E7B-6070-4615-9DBC-5BA77F141F48}|Kinect Photos\\Kinect Photos.csproj|c:\\users\\cl672\\documents\\coding\\csharp\\kinect photos\\kinect photos\\scripts\\testpopulate.sql||{3B902123-F8A7-4915-9F01-361F908088D0}",
-      "RelativeMoniker": "D:0:0:{CAFB0E7B-6070-4615-9DBC-5BA77F141F48}|Kinect Photos\\Kinect Photos.csproj|solutionrelative:kinect photos\\scripts\\testpopulate.sql||{3B902123-F8A7-4915-9F01-361F908088D0}"
+      "AbsoluteMoniker": "D:0:0:{CAFB0E7B-6070-4615-9DBC-5BA77F141F48}|Kinect Photos\\Kinect Photos.csproj|c:\\users\\cl672\\documents\\coding\\csharp\\kinect photos\\kinect photos\\pages\\login.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CAFB0E7B-6070-4615-9DBC-5BA77F141F48}|Kinect Photos\\Kinect Photos.csproj|solutionrelative:kinect photos\\pages\\login.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CAFB0E7B-6070-4615-9DBC-5BA77F141F48}|Kinect Photos\\Kinect Photos.csproj|c:\\users\\cl672\\documents\\coding\\csharp\\kinect photos\\kinect photos\\models\\users.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CAFB0E7B-6070-4615-9DBC-5BA77F141F48}|Kinect Photos\\Kinect Photos.csproj|solutionrelative:kinect photos\\models\\users.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CAFB0E7B-6070-4615-9DBC-5BA77F141F48}|Kinect Photos\\Kinect Photos.csproj|c:\\users\\cl672\\documents\\coding\\csharp\\kinect photos\\kinect photos\\databasehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -34,11 +34,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "Users.cs",
               "DocumentMoniker": "C:\\Users\\cl672\\Documents\\Coding\\Csharp\\Kinect Photos\\Kinect Photos\\models\\Users.cs",
               "RelativeDocumentMoniker": "Kinect Photos\\models\\Users.cs",
@@ -51,39 +51,39 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "createTables.sql",
               "DocumentMoniker": "C:\\Users\\cl672\\Documents\\Coding\\Csharp\\Kinect Photos\\Kinect Photos\\scripts\\createTables.sql",
               "RelativeDocumentMoniker": "Kinect Photos\\scripts\\createTables.sql",
               "ToolTip": "C:\\Users\\cl672\\Documents\\Coding\\Csharp\\Kinect Photos\\Kinect Photos\\scripts\\createTables.sql",
               "RelativeToolTip": "Kinect Photos\\scripts\\createTables.sql",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAABaAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
               "WhenOpened": "2025-05-31T10:43:15.319Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "testPopulate.sql",
               "DocumentMoniker": "C:\\Users\\cl672\\Documents\\Coding\\Csharp\\Kinect Photos\\Kinect Photos\\scripts\\testPopulate.sql",
               "RelativeDocumentMoniker": "Kinect Photos\\scripts\\testPopulate.sql",
               "ToolTip": "C:\\Users\\cl672\\Documents\\Coding\\Csharp\\Kinect Photos\\Kinect Photos\\scripts\\testPopulate.sql",
               "RelativeToolTip": "Kinect Photos\\scripts\\testPopulate.sql",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAkAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
               "WhenOpened": "2025-05-31T10:59:29.276Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "Login.xaml.cs",
               "DocumentMoniker": "C:\\Users\\cl672\\Documents\\Coding\\Csharp\\Kinect Photos\\Kinect Photos\\Pages\\Login.xaml.cs",
               "RelativeDocumentMoniker": "Kinect Photos\\Pages\\Login.xaml.cs",
-              "ToolTip": "C:\\Users\\cl672\\Documents\\Coding\\Csharp\\Kinect Photos\\Kinect Photos\\Pages\\Login.xaml.cs*",
-              "RelativeToolTip": "Kinect Photos\\Pages\\Login.xaml.cs*",
-              "ViewState": "AgIAADcAAAAAAAAAAAAwwE0AAAAAAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\cl672\\Documents\\Coding\\Csharp\\Kinect Photos\\Kinect Photos\\Pages\\Login.xaml.cs",
+              "RelativeToolTip": "Kinect Photos\\Pages\\Login.xaml.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAkwEMAAABdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-31T09:37:14.622Z",
               "EditorCaption": ""

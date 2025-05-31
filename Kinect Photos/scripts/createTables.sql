@@ -1,5 +1,5 @@
 ﻿CREATE TABLE IF NOT EXISTS users (
-	userID int NOT NULL,
+	userID int UNIQUE NOT NULL,
 	userName varchar(25) NOT NULL, -- varchar --> string max length 25
 	pfpPath varchar(200) DEFAULT 'res/user.png' --the default doesn't seem to be working here
 );

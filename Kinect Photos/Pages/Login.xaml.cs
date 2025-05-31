@@ -66,7 +66,6 @@ namespace Kinect_Photos
                 try
                 {
                     profileImg = new BitmapImage(new Uri(profile.pfpPath, UriKind.Relative));
-                    
                 }
                 catch (Exception)
                 {
