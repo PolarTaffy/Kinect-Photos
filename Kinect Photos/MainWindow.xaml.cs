@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SQLite;
+using System.IO;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
@@ -45,6 +47,13 @@ namespace Kinect_Photos
             // Bind the sensor chooser's current sensor to the KinectRegion
             var regionSensorBinding = new Binding("Kinect") { Source = sensorChooser };
             BindingOperations.SetBinding(this.kinectRegion, KinectRegion.KinectSensorProperty, regionSensorBinding);
+
+            // all the database stuff?
+            string dbFile = "kinectPhotos.db";
+            if (!File.Exists(dbFile))
+            {
+                SQLiteConnection.CreateFile(dbFile);
+            }
 
         }
 
