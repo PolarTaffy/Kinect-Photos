@@ -89,6 +89,8 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="DatabaseHelper.cs" />
+    <Compile Include="models\folderPaths.cs" />
+    <Compile Include="models\Users.cs" />
     <Compile Include="Pages\imageView.xaml.cs">
       <DependentUpon>imageView.xaml</DependentUpon>
     </Compile>
@@ -155,7 +157,9 @@
     </Content>
     <Resource Include="testImages\sunflower_large.jpeg" />
     <Resource Include="res\userIcon.png" />
-    <Content Include="scripts\createTables.sql" />
+    <None Include="scripts\createTables.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <Content Include="testImages\dance.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

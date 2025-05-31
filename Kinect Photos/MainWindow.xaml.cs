@@ -48,12 +48,9 @@ namespace Kinect_Photos
             var regionSensorBinding = new Binding("Kinect") { Source = sensorChooser };
             BindingOperations.SetBinding(this.kinectRegion, KinectRegion.KinectSensorProperty, regionSensorBinding);
 
-            // all the database stuff?
-            string dbFile = "kinectPhotos.db";
-            if (!File.Exists(dbFile))
-            {
-                SQLiteConnection.CreateFile(dbFile);
-            }
+            //Database init
+            if (!File.Exists("kinectPhotos.db")) { SQLiteConnection.CreateFile("kinectPhotos.db"); }
+            DatabaseHelper.initializeDatabase();
 
         }
 
