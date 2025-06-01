@@ -47,6 +47,7 @@ namespace Kinect_Photos.Pages.createUser
             }
 
             NavigationService.Navigate(new Login());
+            //TODO: In the future, we need another screen where users set their photo paths, or at least confirm the default paths
         }
     }
 }

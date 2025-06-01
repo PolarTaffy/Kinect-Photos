@@ -41,7 +41,8 @@ namespace Kinect_Photos
 
         private void loadProfiles()
         {
-            List<StackPanel> profileTiles = new List<StackPanel>();
+            //List<StackPanel> profileTiles = new List<StackPanel>();
+            List<Grid> profileIcons = new List<Grid>();
             GalleryView galleryPage = new GalleryView();
 
             using (IDbConnection connection = DatabaseHelper.GetDbConnection())
@@ -95,8 +96,48 @@ namespace Kinect_Photos
                 profilePanel.Children.Add(profileTile);
                 profilePanel.Children.Add(usernameLabel);
 
+                //TODO: Create an edit and delete button for each profile click
+                //TODO: Extract method for these buttons
 
-                profileTiles.Add(profilePanel);
+                //Delete Button
+                KinectCircleButton delete = new KinectCircleButton();
+                delete.VerticalAlignment = VerticalAlignment.Top;
+                delete.HorizontalAlignment = HorizontalAlignment.Right;
+                delete.Width = 70; delete.Height = 70;
+                delete.Content = "❌";
+                delete.Foreground = new SolidColorBrush(Colors.Red);
+                delete.Margin = new Thickness(-5);
+
+                //Edit Button
+                KinectCircleButton edit = new KinectCircleButton();
+                edit.VerticalAlignment = VerticalAlignment.Top;
+                edit.HorizontalAlignment = HorizontalAlignment.Right;
+                edit.Width = 70; edit.Height = 70;
+                edit.Content = "✏️";
+                edit.Foreground = new SolidColorBrush(Colors.Green);
+                edit.Margin = new Thickness(-5);
+
+                
+                //Wrap Panel
+                WrapPanel profileControlBtns = new WrapPanel();
+                profileControlBtns.HorizontalAlignment = HorizontalAlignment.Right;
+                profileControlBtns.FlowDirection = FlowDirection.RightToLeft;
+                profileControlBtns.Orientation = Orientation.Horizontal;
+                profileControlBtns.Margin = new Thickness(0, 5, 5, 0);
+                profileControlBtns.Visibility = Visibility.Hidden;
+
+                profileControlBtns.Children.Add(delete);
+                profileControlBtns.Children.Add(edit);
+
+
+                //Grid
+                Grid fullProfile = new Grid();
+                fullProfile.Children.Add(profilePanel);
+                fullProfile.Children.Add(profileControlBtns);
+                
+
+                profileIcons.Add(fullProfile);
+                //profileTiles.Add(profilePanel);
             }
 
             //New profile creation option
@@ -111,10 +152,15 @@ namespace Kinect_Photos
             StackPanel addAccPanel = new StackPanel();
             addAccPanel.Children.Add(newProfile);
             addAccPanel.Children.Add(makeProfileLabel);
-            profileTiles.Add(addAccPanel); 
+
+            Grid createProfile = new Grid();
+            createProfile.Children.Add(addAccPanel);
+            profileIcons.Add(createProfile);
+
+            //profileTiles.Add(addAccPanel); 
 
             
-            Profiles.ItemsSource = profileTiles; 
+            Profiles.ItemsSource = profileIcons; 
         }
     }
 }

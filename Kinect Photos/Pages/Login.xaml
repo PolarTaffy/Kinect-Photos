@@ -19,7 +19,6 @@
             <Label Content="Select a profile." HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Top" FontSize="20"/>
         </StackPanel>
 
-
         <!--Managing Profile Images-->
         <ItemsControl x:Name="Profiles" HorizontalAlignment="Center" Margin="0,105,0,39" Height="260" Width="1280">
             <ItemsControl.ItemsPanel>
@@ -27,7 +26,6 @@
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Height="260"/>
                 </ItemsPanelTemplate>
             </ItemsControl.ItemsPanel>
-            
         </ItemsControl>
 
     </Grid>
