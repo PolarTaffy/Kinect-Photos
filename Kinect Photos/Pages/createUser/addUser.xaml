@@ -1,0 +1,93 @@
+﻿<Page x:Class="Kinect_Photos.Pages.addUser"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Kinect_Photos.Pages"
+      xmlns:k="http://schemas.microsoft.com/kinect/2013"
+      mc:Ignorable="d" 
+      d:DesignHeight="720" d:DesignWidth="1280"
+      Title="addUser">
+
+    <Page.Resources>
+        <Style TargetType="k:KinectTileButton">
+            <Setter Property="FontSize" Value="72"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Width" Value="120"/>
+            <Setter Property="Height" Value="110"/>
+            <Setter Property="Margin" Value="0"/>
+        </Style>
+    </Page.Resources>
+
+    <Grid Background="White">
+        
+       
+        <StackPanel> <!-- Consider changing to DockPanel l8r -->
+            <Label FontSize="50" HorizontalAlignment="Center" FontWeight="Bold">Input Name:</Label>
+            
+            <!-- Display the current name here-->
+            <!-- To its right, have a submit button -->
+            <Grid Height="200">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1080"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <TextBox HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="72" FontWeight="Bold" x:Name="inputBox" Margin="50 0 0 0">Name Here</TextBox>
+                <k:KinectTileButton Grid.Column="1" Width="200" FontSize="48">Submit</k:KinectTileButton>
+            </Grid>
+
+            <Grid x:Name="Keyboard" VerticalAlignment="Bottom" HorizontalAlignment="Center" MaxHeight="440">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+                <StackPanel Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Center">
+                    <k:KinectTileButton Click="Key_Click">Q</k:KinectTileButton>
+                    <k:KinectTileButton Click="Key_Click">W</k:KinectTileButton>
+                    <k:KinectTileButton Click="Key_Click">E</k:KinectTileButton>
+                    <k:KinectTileButton Click="Key_Click">R</k:KinectTileButton>
+                    <k:KinectTileButton Click="Key_Click">T</k:KinectTileButton>
+                    <k:KinectTileButton Click="Key_Click">Y</k:KinectTileButton>
+                    <k:KinectTileButton Click="Key_Click">U</k:KinectTileButton>
+                    <k:KinectTileButton Click="Key_Click">I</k:KinectTileButton>
+                    <k:KinectTileButton Click="Key_Click">O</k:KinectTileButton>
+                    <k:KinectTileButton Click="Key_Click">P</k:KinectTileButton>
+                </StackPanel>
+                <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center">
+                    <k:KinectTileButton Click="Key_Click">A</k:KinectTileButton>
+                    <k:KinectTileButton Click="Key_Click">S</k:KinectTileButton>
+                    <k:KinectTileButton Click="Key_Click">D</k:KinectTileButton>
+                    <k:KinectTileButton Click="Key_Click">F</k:KinectTileButton>
+                    <k:KinectTileButton Click="Key_Click">G</k:KinectTileButton>
+                    <k:KinectTileButton Click="Key_Click">H</k:KinectTileButton>
+                    <k:KinectTileButton Click="Key_Click">J</k:KinectTileButton>
+                    <k:KinectTileButton Click="Key_Click">K</k:KinectTileButton>
+                    <k:KinectTileButton Click="Key_Click">L</k:KinectTileButton>
+                </StackPanel>
+                <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center">
+                    <k:KinectTileButton Width="200" Click="ChangeCase">Shift</k:KinectTileButton>
+                    <k:KinectTileButton Click="Key_Click">Z</k:KinectTileButton>
+                    <k:KinectTileButton Click="Key_Click">X</k:KinectTileButton>
+                    <k:KinectTileButton Click="Key_Click">C</k:KinectTileButton>
+                    <k:KinectTileButton Click="Key_Click">V</k:KinectTileButton>
+                    <k:KinectTileButton Click="Key_Click">B</k:KinectTileButton>
+                    <k:KinectTileButton Click="Key_Click">N</k:KinectTileButton>
+                    <k:KinectTileButton Click="Key_Click">M</k:KinectTileButton>
+                    <k:KinectTileButton Width="200">CAPS</k:KinectTileButton>
+                </StackPanel>
+                <StackPanel Grid.Row="4" Orientation="Horizontal" HorizontalAlignment="Center">
+                    <k:KinectTileButton Width="900"></k:KinectTileButton>
+                    <k:KinectTileButton Click="Backspace_Click">⌫</k:KinectTileButton>
+                </StackPanel>
+            </Grid>
+
+        </StackPanel>
+
+        
+
+    </Grid>
+</Page>

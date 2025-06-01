@@ -1,5 +1,6 @@
 ﻿using Dapper;
 using Kinect_Photos.models;
+using Kinect_Photos.Pages;
 using Microsoft.Kinect.Toolkit.Controls;
 using System;
 using System.Collections.Generic;
@@ -105,7 +106,7 @@ namespace Kinect_Photos
             makeProfileLabel.HorizontalAlignment = HorizontalAlignment.Center;
             newProfile.Click += (sender, args) =>
             {
-                //TODO: Handle Navigation to Create Profile Screen
+                NavigationService.Navigate(new addUser());
             };
             StackPanel addAccPanel = new StackPanel();
             addAccPanel.Children.Add(newProfile);

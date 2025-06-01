@@ -91,10 +91,17 @@
     <Compile Include="DatabaseHelper.cs" />
     <Compile Include="models\folderPaths.cs" />
     <Compile Include="models\Users.cs" />
+    <Compile Include="Pages\createUser\addUser.xaml.cs">
+      <DependentUpon>addUser.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\imageView.xaml.cs">
       <DependentUpon>imageView.xaml</DependentUpon>
     </Compile>
     <Compile Include="User.cs" />
+    <Page Include="Pages\createUser\addUser.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\imageView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
