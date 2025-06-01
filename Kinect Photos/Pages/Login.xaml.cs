@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Common;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -15,6 +16,7 @@ using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
+using System.Windows.Media.Effects;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
@@ -33,7 +35,6 @@ namespace Kinect_Photos
         public Login()
         {
             InitializeComponent();
-
             //this.sensorChooserUi.KinectSensorChooser = MainWindow.sensorChooser;
             //FIXME: The KinectSensorChooser appears blank
             loadProfiles();
@@ -41,23 +42,14 @@ namespace Kinect_Photos
 
         private void loadProfiles()
         {
-            //List<StackPanel> profileTiles = new List<StackPanel>();
             List<Grid> profileIcons = new List<Grid>();
             GalleryView galleryPage = new GalleryView();
 
             using (IDbConnection connection = DatabaseHelper.GetDbConnection())
             {
                 connection.Open();
-                Console.WriteLine(connection.ConnectionString);
                 localUsers = connection.Query<Users>("SELECT * FROM Users").ToList();
-
-                var raw = connection.Query("SELECT * FROM users").ToList();
-                Console.WriteLine($"Raw rows: {raw.Count}"); // Should not be 0
             }
-
-
-            Console.WriteLine(localUsers.ToString());
-
 
             foreach (Users profile in localUsers) {
                 KinectTileButton profileTile = new KinectTileButton();
@@ -96,9 +88,7 @@ namespace Kinect_Photos
                 profilePanel.Children.Add(profileTile);
                 profilePanel.Children.Add(usernameLabel);
 
-                //TODO: Create an edit and delete button for each profile click
-                //TODO: Extract method for these buttons
-
+                //TODO: Extract method for these buttons?
                 //Delete Button
                 KinectCircleButton delete = new KinectCircleButton();
                 delete.VerticalAlignment = VerticalAlignment.Top;
@@ -107,6 +97,7 @@ namespace Kinect_Photos
                 delete.Content = "❌";
                 delete.Foreground = new SolidColorBrush(Colors.Red);
                 delete.Margin = new Thickness(-5);
+                
 
                 //Edit Button
                 KinectCircleButton edit = new KinectCircleButton();
@@ -117,7 +108,6 @@ namespace Kinect_Photos
                 edit.Foreground = new SolidColorBrush(Colors.Green);
                 edit.Margin = new Thickness(-5);
 
-                
                 //Wrap Panel
                 WrapPanel profileControlBtns = new WrapPanel();
                 profileControlBtns.HorizontalAlignment = HorizontalAlignment.Right;
@@ -129,7 +119,6 @@ namespace Kinect_Photos
                 profileControlBtns.Children.Add(delete);
                 profileControlBtns.Children.Add(edit);
 
-
                 //Grid
                 Grid fullProfile = new Grid();
                 fullProfile.Children.Add(profilePanel);
@@ -137,7 +126,21 @@ namespace Kinect_Photos
                 
 
                 profileIcons.Add(fullProfile);
-                //profileTiles.Add(profilePanel);
+
+                delete.Click += (sender, args) =>
+                {
+                    //TODO: Add "Are you sure?" popup
+
+                    using (IDbConnection connection = DatabaseHelper.GetDbConnection())
+                    {
+                        connection.Open();
+                        int userID = profile.userID;
+                        var sql = "DELETE FROM users WHERE userID = (@userID)";
+                        connection.Execute(sql, new { userID });
+                    }
+                    
+                    Profiles.ItemsSource = new List<Grid>(profileIcons);
+                };
             }
 
             //New profile creation option
@@ -157,10 +160,25 @@ namespace Kinect_Photos
             createProfile.Children.Add(addAccPanel);
             profileIcons.Add(createProfile);
 
-            //profileTiles.Add(addAccPanel); 
-
-            
             Profiles.ItemsSource = profileIcons; 
+        }
+
+        private void EditModeBtn_Click(object sender, RoutedEventArgs e)
+        {
+            foreach (Grid profile in  Profiles.ItemsSource)
+            {
+                UIElementCollection controls = profile.Children;
+                List<UIElement> elementList = controls.Cast<UIElement>().ToList();
+                foreach (var item in elementList)
+                {
+                    if (typeof(WrapPanel).Equals(item.GetType()))
+                    {
+                        WrapPanel panel = (WrapPanel) item;
+                        if (panel.Visibility == Visibility.Visible) { panel.Visibility = Visibility.Hidden; }
+                        else { panel.Visibility = Visibility.Visible; }
+                    }
+                }
+            }
         }
     }
 }

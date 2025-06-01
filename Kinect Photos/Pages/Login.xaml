@@ -28,5 +28,9 @@
             </ItemsControl.ItemsPanel>
         </ItemsControl>
 
+        <k:KinectCircleButton x:Name="EditModeBtn" VerticalAlignment="Bottom" HorizontalAlignment="Center" Click="EditModeBtn_Click">✏️</k:KinectCircleButton>
+        
+        <!-- TODO: Add Settings Button -->
+        
     </Grid>
 </Page>

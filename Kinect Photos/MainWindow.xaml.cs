@@ -38,6 +38,8 @@ namespace Kinect_Photos
         {
             InitializeComponent();
 
+            //TODO: In settings, allow user to toggle: NavigationUIVisibility="Hidden"
+
             // initialize the sensor chooser and UI
             sensorChooser = new KinectSensorChooser();
             sensorChooser.KinectChanged += SensorChooserOnKinectChanged;
