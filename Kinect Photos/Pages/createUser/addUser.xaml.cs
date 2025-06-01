@@ -1,6 +1,10 @@
-﻿using Microsoft.Kinect.Toolkit.Controls;
+﻿using Dapper;
+using Kinect_Photos.models;
+using Kinect_Photos.Pages.createUser;
+using Microsoft.Kinect.Toolkit.Controls;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Diagnostics;
 using System.Linq;
 using System.Text;
@@ -22,11 +26,16 @@ namespace Kinect_Photos.Pages
     public partial class addUser : Page
     {
         Boolean kbCapitalized = true;
+        static String name;
         public addUser()
         {
             InitializeComponent();
             inputBox.Text = string.Empty;
+        }
 
+        public static String getName()
+        {
+            return name; //This line seems a little problematic, revisit later
         }
 
         private void Key_Click(object sender, RoutedEventArgs e)
@@ -34,6 +43,8 @@ namespace Kinect_Photos.Pages
             KinectTileButton key = sender as KinectTileButton;
             inputBox.Text += key.Content;
             if (kbCapitalized) { ChangeCase(); }
+            name = inputBox.Text;
+
         }
 
         public void ChangeCase()
@@ -58,6 +69,16 @@ namespace Kinect_Photos.Pages
             if (inputBox.Text.Length > 0)
             {
                 inputBox.Text = inputBox.Text.Substring(0, inputBox.Text.Length - 1);
+            }
+        }
+
+        private void SubmitButtonClick(object sender, RoutedEventArgs e)
+        {
+            if (inputBox.Text.Length > 0)
+            {
+                //pass this into selectPfp
+                Debug.WriteLine(inputBox.Text);
+                NavigationService.Navigate(new selectPfp(), inputBox.Text);
             }
         }
     }

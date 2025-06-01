@@ -53,14 +53,6 @@ namespace Kinect_Photos
             //Database init
             if (!File.Exists("kinectPhotos.db")) { SQLiteConnection.CreateFile("kinectPhotos.db"); }
             DatabaseHelper.initializeDatabase();
-
-            using (IDbConnection connection = DatabaseHelper.GetDbConnection())
-            {
-                connection.Open();
-                string sql = File.ReadAllText("scripts/testPopulate.sql");
-                connection.Execute(sql);
-            }
-
         }
 
         public static HandPointer getHandPointer()

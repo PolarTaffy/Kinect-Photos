@@ -34,7 +34,7 @@
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
                 <TextBox HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="72" FontWeight="Bold" x:Name="inputBox" Margin="50 0 0 0">Name Here</TextBox>
-                <k:KinectTileButton Grid.Column="1" Width="200" FontSize="48">Submit</k:KinectTileButton>
+                <k:KinectTileButton Grid.Column="1" Width="200" FontSize="48" Click="SubmitButtonClick">Submit</k:KinectTileButton>
             </Grid>
 
             <Grid x:Name="Keyboard" VerticalAlignment="Bottom" HorizontalAlignment="Center" MaxHeight="440">
@@ -80,7 +80,7 @@
                     <k:KinectTileButton Width="200">CAPS</k:KinectTileButton>
                 </StackPanel>
                 <StackPanel Grid.Row="4" Orientation="Horizontal" HorizontalAlignment="Center">
-                    <k:KinectTileButton Width="900"></k:KinectTileButton>
+                    <k:KinectTileButton Width="900" Click="Key_Click">&#160;</k:KinectTileButton>
                     <k:KinectTileButton Click="Backspace_Click">⌫</k:KinectTileButton>
                 </StackPanel>
             </Grid>

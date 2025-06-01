@@ -11,12 +11,12 @@
       "RelativeMoniker": "D:0:0:{CAFB0E7B-6070-4615-9DBC-5BA77F141F48}|Kinect Photos\\Kinect Photos.csproj|solutionrelative:kinect photos\\pages\\createuser\\adduser.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CAFB0E7B-6070-4615-9DBC-5BA77F141F48}|Kinect Photos\\Kinect Photos.csproj|C:\\Users\\cl672\\Documents\\Coding\\Csharp\\Kinect Photos\\kinect photos\\pages\\galleryview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{CAFB0E7B-6070-4615-9DBC-5BA77F141F48}|Kinect Photos\\Kinect Photos.csproj|solutionrelative:kinect photos\\pages\\galleryview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{CAFB0E7B-6070-4615-9DBC-5BA77F141F48}|Kinect Photos\\Kinect Photos.csproj|c:\\users\\cl672\\documents\\coding\\csharp\\kinect photos\\kinect photos\\pages\\createuser\\selectpfp.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CAFB0E7B-6070-4615-9DBC-5BA77F141F48}|Kinect Photos\\Kinect Photos.csproj|solutionrelative:kinect photos\\pages\\createuser\\selectpfp.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CAFB0E7B-6070-4615-9DBC-5BA77F141F48}|Kinect Photos\\Kinect Photos.csproj|C:\\Users\\cl672\\Documents\\Coding\\Csharp\\Kinect Photos\\kinect photos\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{CAFB0E7B-6070-4615-9DBC-5BA77F141F48}|Kinect Photos\\Kinect Photos.csproj|solutionrelative:kinect photos\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{CAFB0E7B-6070-4615-9DBC-5BA77F141F48}|Kinect Photos\\Kinect Photos.csproj|c:\\users\\cl672\\documents\\coding\\csharp\\kinect photos\\kinect photos\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CAFB0E7B-6070-4615-9DBC-5BA77F141F48}|Kinect Photos\\Kinect Photos.csproj|solutionrelative:kinect photos\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,32 +26,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "MainWindow.xaml",
-              "DocumentMoniker": "C:\\Users\\cl672\\Documents\\Coding\\Csharp\\Kinect Photos\\Kinect Photos\\MainWindow.xaml",
-              "RelativeDocumentMoniker": "Kinect Photos\\MainWindow.xaml",
-              "ToolTip": "C:\\Users\\cl672\\Documents\\Coding\\Csharp\\Kinect Photos\\Kinect Photos\\MainWindow.xaml",
-              "RelativeToolTip": "Kinect Photos\\MainWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-06-01T12:04:03.827Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "GalleryView.xaml",
-              "DocumentMoniker": "C:\\Users\\cl672\\Documents\\Coding\\Csharp\\Kinect Photos\\Kinect Photos\\Pages\\GalleryView.xaml",
-              "RelativeDocumentMoniker": "Kinect Photos\\Pages\\GalleryView.xaml",
-              "ToolTip": "C:\\Users\\cl672\\Documents\\Coding\\Csharp\\Kinect Photos\\Kinect Photos\\Pages\\GalleryView.xaml",
-              "RelativeToolTip": "Kinect Photos\\Pages\\GalleryView.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-06-01T00:18:46.505Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -61,7 +37,33 @@
               "ToolTip": "C:\\Users\\cl672\\Documents\\Coding\\Csharp\\Kinect Photos\\Kinect Photos\\Pages\\createUser\\addUser.xaml",
               "RelativeToolTip": "Kinect Photos\\Pages\\createUser\\addUser.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-05-31T18:13:01.576Z",
+              "WhenOpened": "2025-06-01T17:18:52.274Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\cl672\\Documents\\Coding\\Csharp\\Kinect Photos\\Kinect Photos\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "Kinect Photos\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\cl672\\Documents\\Coding\\Csharp\\Kinect Photos\\Kinect Photos\\MainWindow.xaml.cs",
+              "RelativeToolTip": "Kinect Photos\\MainWindow.xaml.cs",
+              "ViewState": "AgIAADgAAAAAAAAAAAAmwDgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-01T14:09:50.038Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "selectPfp.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\cl672\\Documents\\Coding\\Csharp\\Kinect Photos\\Kinect Photos\\Pages\\createUser\\selectPfp.xaml.cs",
+              "RelativeDocumentMoniker": "Kinect Photos\\Pages\\createUser\\selectPfp.xaml.cs",
+              "ToolTip": "C:\\Users\\cl672\\Documents\\Coding\\Csharp\\Kinect Photos\\Kinect Photos\\Pages\\createUser\\selectPfp.xaml.cs",
+              "RelativeToolTip": "Kinect Photos\\Pages\\createUser\\selectPfp.xaml.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAApwDAAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-01T13:24:05.278Z",
               "EditorCaption": ""
             },
             {
@@ -72,7 +74,7 @@
               "RelativeDocumentMoniker": "Kinect Photos\\Pages\\createUser\\addUser.xaml.cs",
               "ToolTip": "C:\\Users\\cl672\\Documents\\Coding\\Csharp\\Kinect Photos\\Kinect Photos\\Pages\\createUser\\addUser.xaml.cs",
               "RelativeToolTip": "Kinect Photos\\Pages\\createUser\\addUser.xaml.cs",
-              "ViewState": "AgIAACYAAAAAAAAAAIA6wDwAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAACEAAAAAAAAAAAAEwCUAAABOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-31T18:13:08.31Z",
               "EditorCaption": ""
