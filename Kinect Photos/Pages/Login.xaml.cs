@@ -138,7 +138,8 @@ namespace Kinect_Photos
                         var sql = "DELETE FROM users WHERE userID = (@userID)";
                         connection.Execute(sql, new { userID });
                     }
-                    
+
+                    profileIcons.Remove(fullProfile);
                     Profiles.ItemsSource = new List<Grid>(profileIcons);
                 };
             }
