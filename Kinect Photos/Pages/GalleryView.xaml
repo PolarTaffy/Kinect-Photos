@@ -41,8 +41,8 @@
                 </Setter.Value>
             </Setter>
             <Setter Property="FontSize" Value="16"/>
-            <Setter Property="Width" Value="110"/>
-            <Setter Property="Height" Value="40"/>
+            <Setter Property="Width" Value="110"/> 
+            <Setter Property="Height" Value="40"/> 
             <Setter Property="Margin" Value="5"/>
             <Setter Property="Background" Value="Transparent"/>
         </Style>
@@ -51,6 +51,15 @@
         <Style TargetType="{x:Type k:KinectTileButton}" BasedOn="{StaticResource NavButtonStyle}" x:Key="SelectedNavButtonStyle">
             <Setter Property="Background" Value="#DDDDDD"/>
             <Setter Property="Foreground" Value="#444"/>
+        </Style>
+        
+        <!-- Style for Overlay Buttons -->
+        <Style TargetType="{x:Type k:KinectTileButton}" x:Key="OverlayButtonStyle" BasedOn="{StaticResource NavButtonStyle}">
+            <Setter Property="Background" Value="#FF555555"/> <!-- Darker background for buttons -->
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Width" Value="200"/>
+            <Setter Property="Height" Value="60"/>
+            <Setter Property="Margin" Value="10"/>
         </Style>
     </Page.Resources>
 
@@ -84,10 +93,43 @@
 
 
         <!-- Menu Button! -->
-        <k:KinectCircleButton x:Name="menuBtn" HorizontalAlignment="Right" VerticalAlignment="Bottom" Width="120" Height="120" Grid.Row="5" FontSize="72" FontWeight="Normal" ContentForeground="Black" Foreground="#7F000000" Content="☰" Background="{x:Null}"/>
+        <k:KinectCircleButton x:Name="menuBtn" HorizontalAlignment="Right" VerticalAlignment="Bottom" Width="120" Height="120" Grid.Row="5" FontSize="72" FontWeight="Normal" ContentForeground="Black" Foreground="#7F000000" Content="☰" Background="{x:Null}" Panel.ZIndex="5" Click="MenuBtn_Click"/>
 
         <!-- Use adorners for the menu-->
 
+        <!-- Overlay Panel -->
+        <Border x:Name="OverlayPanel"
+                Background="#CC000000"
+                Visibility="Visible"
+                Panel.ZIndex="10" 
+                HorizontalAlignment="Stretch" 
+                VerticalAlignment="Stretch">
+
+            <Grid>
+                <k:KinectTileButton x:Name="OverlayDetector" Width="1280" Height="716" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}" LabelBackground="{x:Null}" Click="OverlayPanel_Click" Panel.ZIndex="8" RenderTransformOrigin="0.5,0.5">
+                    <k:KinectTileButton.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleX="10" ScaleY="10"/>
+                            <SkewTransform/>
+                            <RotateTransform/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </k:KinectTileButton.RenderTransform>
+                </k:KinectTileButton>
+                <Border Background="#FF2D2D30"
+                    CornerRadius="15"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Padding="40"
+                    MinWidth="300" Panel.ZIndex="9">
+                    <StackPanel Orientation="Vertical" HorizontalAlignment="Center">
+                        <k:KinectTileButton x:Name="SignOutButton" Content="Sign Out" Style="{StaticResource OverlayButtonStyle}" Click="SignOutButton_Click"/>
+                        <k:KinectTileButton x:Name="SettingsButton" Content="Settings" Style="{StaticResource OverlayButtonStyle}" Click="SettingsButton_Click"/>
+                        <k:KinectTileButton x:Name="CustomizationButton" Content="Customization" Style="{StaticResource OverlayButtonStyle}" Click="CustomizationButton_Click"/>
+                    </StackPanel>
+                </Border>
+            </Grid>
+        </Border>
 
     </Grid>
 </Page>

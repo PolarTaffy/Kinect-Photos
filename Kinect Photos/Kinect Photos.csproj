@@ -112,6 +112,9 @@
     <Compile Include="Pages\createUser\selectPfp.xaml.cs">
       <DependentUpon>selectPfp.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\createUser\SetDirectories.xaml.cs">
+      <DependentUpon>SetDirectories.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\imageView.xaml.cs">
       <DependentUpon>imageView.xaml</DependentUpon>
     </Compile>
@@ -121,6 +124,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\createUser\selectPfp.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\createUser\SetDirectories.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

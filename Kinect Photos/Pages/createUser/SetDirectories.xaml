@@ -1,0 +1,43 @@
+﻿<Page x:Class="Kinect_Photos.Pages.createUser.SetDirectories"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Kinect_Photos.Pages.createUser"
+      xmlns:k="http://schemas.microsoft.com/kinect/2013"
+      mc:Ignorable="d" 
+      d:DesignHeight="720" d:DesignWidth="1280"
+      Title="SetDirectories">
+
+    <!--<Style TargetType="k:KinectCircleButton">
+        <Setter Property="Template">
+
+        </Setter>
+    </Style>-->
+
+    <Grid Background="White">
+        <k:KinectCircleButton HorizontalAlignment="Right" VerticalAlignment="Top">Skip</k:KinectCircleButton>
+
+        <StackPanel>
+            <Label FontSize="50">Where would you like us to scan your photos from?</Label>
+            <!--<Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="200"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <k:KinectCircleButton x:Name="defaultFolderCheck" Grid.Column="0"></k:KinectCircleButton>
+                <Label Grid.Column="1" FontSize="36" >Default Directory: XXXXXXXXXX</Label>
+            </Grid>-->
+
+            <Expander/>
+            <Label FontSize="50">Directories:</Label>
+
+            <Label FontSize="50">Add Directory...</Label>
+            
+        </StackPanel>
+        
+        
+        
+
+    </Grid>
+</Page>

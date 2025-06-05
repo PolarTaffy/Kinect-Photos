@@ -29,10 +29,9 @@ namespace Kinect_Photos
     public partial class MainWindow : Window
     {
         public static KinectSensorChooser sensorChooser;
-        private int[] ints;
-        private User[] users = new User[5];
         public InteractionStream interactionStream;
         private static KinectRegion curKinectRegion;
+        private static int CUR_USER_ID;
 
         public MainWindow()
         {
@@ -55,6 +54,15 @@ namespace Kinect_Photos
             //Database init
             if (!File.Exists("kinectPhotos.db")) { SQLiteConnection.CreateFile("kinectPhotos.db"); }
             DatabaseHelper.initializeDatabase();
+        }
+
+        public static int getUserID()
+        {
+            return CUR_USER_ID;
+        }
+        public static void setUserID(int userID)
+        {
+            CUR_USER_ID = userID;
         }
 
         public static HandPointer getHandPointer()

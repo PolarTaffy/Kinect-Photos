@@ -44,6 +44,12 @@ namespace Kinect_Photos.Pages.createUser
 
                 var sql = "INSERT INTO users (userName) VALUES (@userName)";
                 connection.Execute(sql, new {userName});
+
+                ////TODO: Create filepaths dir for user
+                //string folderPath = "C:/Users/cl672/Documents/Testing/sampleGallery";
+                ////int userID = 
+                //var sql1 = "INSERT INTO folderPaths (userID, folderPath) VALUES (@userID, @folderPath)";
+                
             }
 
             NavigationService.Navigate(new Login());

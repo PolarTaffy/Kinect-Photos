@@ -1,6 +1,9 @@
-﻿using Microsoft.Kinect.Toolkit.Controls;
+﻿using Dapper;
+using Kinect_Photos.models;
+using Microsoft.Kinect.Toolkit.Controls;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.IO;
 using System.Linq;
 using System.Reflection;
@@ -30,15 +33,35 @@ namespace Kinect_Photos
         {
             InitializeComponent();
 
-            menuBtn.Click += (sender, args) =>
-            {
-                //NavigationService.Navigate(...);
-            };
-
             LoadGalleryImages();
 
             //TODO: Save user's last scroll position
             HandleTopMenuVisibility();
+        }
+
+        private void MenuBtn_Click(object sender, RoutedEventArgs e) { OverlayPanel.Visibility = Visibility.Visible; }
+
+        private void OverlayPanel_Click(object sender, RoutedEventArgs e) { OverlayPanel.Visibility = Visibility.Collapsed; }
+
+        private void SignOutButton_Click(object sender, RoutedEventArgs e)
+        {
+            // TODO: Implement Sign Out logic
+            MessageBox.Show("Sign Out button clicked!"); 
+            OverlayPanel.Visibility = Visibility.Collapsed; 
+        }
+
+        private void SettingsButton_Click(object sender, RoutedEventArgs e)
+        {
+            // TODO: Implement Settings navigation or logic
+            MessageBox.Show("Settings button clicked!"); 
+            OverlayPanel.Visibility = Visibility.Collapsed; 
+        }
+
+        private void CustomizationButton_Click(object sender, RoutedEventArgs e)
+        {
+            // TODO: Implement Customization navigation or logic
+            MessageBox.Show("Customization button clicked!"); 
+            OverlayPanel.Visibility = Visibility.Collapsed; 
         }
 
         private void HandleTopMenuVisibility()
@@ -71,13 +94,29 @@ namespace Kinect_Photos
             //Keeps everything in memory
             //Figure out how to cache things???
 
-            //FIXME: Get current user
-            User curUser = new User("Ralphie");
+            List<String> directories = new List<String>();
+            directories.Add("C:/Users/cl672/Documents/Testing/sampleGallery");
 
-            //Get user directory
+            using (IDbConnection connection = DatabaseHelper.GetDbConnection()) //TODO: Access the filepaths for the current user
+            {
+                connection.Open();
+                //cur user
+                int userID = MainWindow.getUserID(); 
+
+                //get all databases in the table filepaths
+                var sql = "SELECT * FROM folderPaths WHERE userID = (@userID);";
+                List<folderPaths> paths = connection.Query<folderPaths>(sql, new { userID }).ToList();
+
+                foreach (folderPaths path in paths)
+                {
+                    directories.Add(path.folderPath);
+                }
+            }
+
+
             List<KinectTileButton> images = new List<KinectTileButton>();
 
-            foreach (String directory in curUser.getImageDirectories())
+            foreach (String directory in directories)
             {
                 String[] extensions = new[] { "*.png", "*.jpg", "*.jpeg", "*.bmp", "*.gif" };
                 var imageFiles = extensions.SelectMany(ext => Directory.GetFiles(directory, ext)).ToList();

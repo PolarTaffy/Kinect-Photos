@@ -75,6 +75,7 @@ namespace Kinect_Photos
                 //Button - Functionality
                 profileTile.Click += (sender, args) =>
                 {
+                    MainWindow.setUserID(profile.userID);
                     //TODO: Make a function to actually like handle signing in
                     NavigationService.Navigate(galleryPage);
                 };
@@ -141,6 +142,9 @@ namespace Kinect_Photos
 
                     profileIcons.Remove(fullProfile);
                     Profiles.ItemsSource = new List<Grid>(profileIcons);
+
+                    //TODO: Remove all user filepaths from filepaths table
+
                 };
             }
 
