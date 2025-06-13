@@ -101,7 +101,7 @@
         <!-- Overlay Panel -->
         <Border x:Name="OverlayPanel"
                 Background="#CC000000"
-                Visibility="Visible"
+                Visibility="Collapsed"
                 Panel.ZIndex="5" 
                 HorizontalAlignment="Stretch" 
                 VerticalAlignment="Stretch">

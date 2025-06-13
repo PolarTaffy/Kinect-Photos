@@ -8,9 +8,22 @@
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="selectPfp">
-
+    
     <Grid Background="White">
-        <Label x:Name="nameLabel" FontSize="40">Your name is: </Label>
-        <k:KinectTileButton Foreground="White" FontWeight="Bold" Click="SubmitBtn_Click">Submit</k:KinectTileButton>
+
+        <k:KinectScrollViewer VerticalAlignment="Center" Margin="0,50,0,50">
+            <ItemsControl x:Name="pictureContainer">
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <UniformGrid x:Name="imageGrid" Columns="8" />
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+
+            </ItemsControl>
+
+        </k:KinectScrollViewer>
+
+        <Label x:Name="nameLabel" FontSize="40">Your name is:</Label>
+        <k:KinectTileButton Foreground="White" FontWeight="Bold" Click="SubmitBtn_Click" HorizontalAlignment="Center" Height="90" Width="200" VerticalAlignment="Bottom" Margin="0,0,0,25">Submit</k:KinectTileButton>
     </Grid>
 </Page>

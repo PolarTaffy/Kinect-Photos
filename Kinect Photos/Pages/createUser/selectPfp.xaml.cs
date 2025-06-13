@@ -1,9 +1,11 @@
 ﻿using Dapper;
 using Kinect_Photos.models;
+using Microsoft.Kinect.Toolkit.Controls;
 using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Diagnostics;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Windows;
@@ -15,6 +17,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace Kinect_Photos.Pages.createUser
 {
@@ -29,8 +32,9 @@ namespace Kinect_Photos.Pages.createUser
             InitializeComponent();
 
             userName = addUser.getName();
-            nameLabel.Content = userName;
-            Debug.WriteLine(userName);
+            nameLabel.Content = "Select a profile icon, " + userName + ".";
+
+            initializePfps();
         }
 
         private void SubmitBtn_Click(object sender, RoutedEventArgs e)
@@ -55,5 +59,32 @@ namespace Kinect_Photos.Pages.createUser
             NavigationService.Navigate(new Login());
             //TODO: In the future, we need another screen where users set their photo paths, or at least confirm the default paths
         }
+
+        private void initializePfps()
+        {
+            List<KinectTileButton> pictures = new List<KinectTileButton>();
+
+            var pfps = Directory.GetFiles("./res/pfp");
+            foreach (String pfpsrc in pfps) {
+                KinectTileButton button = new KinectTileButton();
+                button.HorizontalAlignment = HorizontalAlignment.Stretch;
+                button.VerticalAlignment = VerticalAlignment.Stretch;
+
+                ImageBrush curImage = new ImageBrush();
+                curImage.ImageSource = new BitmapImage(new Uri(pfpsrc, UriKind.Relative));
+                curImage.Stretch = Stretch.UniformToFill;
+                button.Background = curImage;
+
+                button.Click += (sender, args) =>
+                {
+                };
+                button.Margin = new Thickness(0);
+
+                pictures.Add(button);
+            }
+
+            pictureContainer.ItemsSource = pictures;
+        }
+
     }
 }
