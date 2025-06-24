@@ -32,11 +32,16 @@ namespace Kinect_Photos
         public GalleryView()
         {
             InitializeComponent();
-
+            DebugInit();
             LoadGalleryImages();
-
             //TODO: Save user's last scroll position
             HandleTopMenuVisibility();
+
+        }
+
+        private void DebugInit()
+        {
+            DEBUGuserID.Content = MainWindow.getUserID().ToString();
         }
 
         private void MenuBtn_Click(object sender, RoutedEventArgs e) { OverlayPanel.Visibility = Visibility.Visible; }
@@ -47,7 +52,11 @@ namespace Kinect_Photos
         {
             // TODO: Implement Sign Out logic
             MessageBox.Show("Sign Out button clicked!"); 
-            OverlayPanel.Visibility = Visibility.Collapsed; 
+            OverlayPanel.Visibility = Visibility.Collapsed;
+            MainWindow.setUserID(-1);
+            NavigationService.Refresh();
+            //NavigationService.Navigate(new GalleryView());
+            NavigationService.Navigate(new Login());
         }
 
         private void SettingsButton_Click(object sender, RoutedEventArgs e)
@@ -94,8 +103,9 @@ namespace Kinect_Photos
             //Keeps everything in memory
             //Figure out how to cache things???
 
+            //debug
             List<String> directories = new List<String>();
-            directories.Add("C:/Users/cl672/Documents/Testing/sampleGallery");
+            if (MainWindow.getUserID() > 0) directories.Add("C:/Users/cl672/Documents/Testing/sampleGallery");
 
             using (IDbConnection connection = DatabaseHelper.GetDbConnection()) //TODO: Access the filepaths for the current user
             {
