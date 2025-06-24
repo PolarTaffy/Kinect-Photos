@@ -43,8 +43,6 @@ namespace Kinect_Photos
         private void loadProfiles()
         {
             List<Grid> profileIcons = new List<Grid>();
-            GalleryView galleryPage = new GalleryView();
-
             using (IDbConnection connection = DatabaseHelper.GetDbConnection())
             {
                 connection.Open();
@@ -76,8 +74,9 @@ namespace Kinect_Photos
                 profileTile.Click += (sender, args) =>
                 {
                     MainWindow.setUserID(profile.userID); //FIXME: Not setting properly, only value is 0.
+                    //Debug.WriteLine(MainWindow.getUserID());
                     //TODO: Make a function to actually like handle signing in
-                    NavigationService.Navigate(galleryPage);
+                    NavigationService.Navigate(new GalleryView());
                 };
                 
                 //Label

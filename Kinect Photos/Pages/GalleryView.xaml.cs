@@ -4,6 +4,7 @@ using Microsoft.Kinect.Toolkit.Controls;
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Reflection;
@@ -41,7 +42,8 @@ namespace Kinect_Photos
 
         private void DebugInit()
         {
-            DEBUGuserID.Content = MainWindow.getUserID().ToString();
+            Debug.WriteLine(MainWindow.getUserID());
+            DEBUGuserID.Content = MainWindow.getUserID();
         }
 
         private void MenuBtn_Click(object sender, RoutedEventArgs e) { OverlayPanel.Visibility = Visibility.Visible; }

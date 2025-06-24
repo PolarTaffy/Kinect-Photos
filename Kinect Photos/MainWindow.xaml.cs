@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SQLite;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Runtime.CompilerServices;
@@ -62,7 +63,10 @@ namespace Kinect_Photos
         }
         public static void setUserID(int userID)
         {
+            //Debug.WriteLine("User ID: " + userID);
             CUR_USER_ID = userID;
+            //Debug.WriteLine("Current User ID: " + userID);
+            //Debug.WriteLine(getUserID());
         }
 
         public static HandPointer getHandPointer()
