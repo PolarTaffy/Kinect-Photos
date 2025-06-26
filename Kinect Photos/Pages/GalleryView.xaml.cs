@@ -42,7 +42,6 @@ namespace Kinect_Photos
 
         private void DebugInit()
         {
-            Debug.WriteLine(MainWindow.getUserID());
             DEBUGuserID.Content = MainWindow.getUserID();
         }
 

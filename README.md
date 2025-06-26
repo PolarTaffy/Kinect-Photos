@@ -17,8 +17,8 @@ I aim to complete the following before releasing the first version.
 | Feature                        | Status         | Notes                                                                                                   |
 |-------------------------------|----------------|---------------------------------------------------------------------------------------------------------|
 | Core User Experience          |                |                                                                                                         |
-| - User Profile Creation       | 🔄 In Progress | Basic name entry and saving. Profile picture and photo directory setup are pending.                    |
-| - User Login                  | ✅ Done        | Users can select from existing profiles to log in.                                                     |
+| - User Profile Creation       | 🔄 In Progress | Basic name entry, saving, and profile picture selection. Photo directory setup is pending.              |
+| - User Login                  | ✅ Done        | Users can select from existing profiles to log in. Log out is functional.                               |
 | - Profile Management          | 🔄 In Progress | Deletion is partially implemented; editing and full PFP/directory management are not started.          |
 | - Photo Gallery Display       | ✅ Done        | Loads and displays images from configured directories.                                                 |
 | - Image Viewing               | 🔄 In Progress        | Users can navigate to a full-screen view of an individual image and zoom in; panning not yet functional.                                         |

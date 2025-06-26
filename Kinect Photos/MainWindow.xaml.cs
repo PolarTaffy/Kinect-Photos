@@ -63,10 +63,7 @@ namespace Kinect_Photos
         }
         public static void setUserID(int userID)
         {
-            //Debug.WriteLine("User ID: " + userID);
             CUR_USER_ID = userID;
-            //Debug.WriteLine("Current User ID: " + userID);
-            //Debug.WriteLine(getUserID());
         }
 
         public static HandPointer getHandPointer()

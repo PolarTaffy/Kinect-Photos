@@ -73,9 +73,7 @@ namespace Kinect_Photos
                 //Button - Functionality
                 profileTile.Click += (sender, args) =>
                 {
-                    MainWindow.setUserID(profile.userID); //FIXME: Not setting properly, only value is 0.
-                    //Debug.WriteLine(MainWindow.getUserID());
-                    //TODO: Make a function to actually like handle signing in
+                    MainWindow.setUserID(profile.userID);
                     NavigationService.Navigate(new GalleryView());
                 };
                 
