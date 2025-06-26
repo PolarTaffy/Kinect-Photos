@@ -6,5 +6,5 @@
 
 CREATE TABLE IF NOT EXISTS folderPaths (
 	folderPath varchar(200) NOT NULL,
-	userID int NOT NULL -- manages who owns the folder
+	userID int NOT NULL -- manages who owns the folder; a userID of -1 means that it's a universal folder.
 );

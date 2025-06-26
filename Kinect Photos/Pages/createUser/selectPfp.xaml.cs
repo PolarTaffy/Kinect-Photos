@@ -63,8 +63,6 @@ namespace Kinect_Photos.Pages.createUser
                 button.Click += (sender, args) =>
                 {
                     pfpImage = pfpsrc;
-                    //Login(pfpsrc);
-                    
                 };
                 button.Margin = new Thickness(0);
 
@@ -80,9 +78,6 @@ namespace Kinect_Photos.Pages.createUser
             using (IDbConnection connection = DatabaseHelper.GetDbConnection())
             {
                 connection.Open();
-                //do we want to prevent duplicate names? nah
-                //connection.Query<Users>("SELECT * FROM Users").ToList();
-
                 String sql;
                 if (pfpPath == null || pfpPath.Length > 0)
                 {
@@ -93,8 +88,6 @@ namespace Kinect_Photos.Pages.createUser
                     sql = "INSERT INTO users (userName) VALUES (@userName)";
                     connection.Execute(sql, new { userName });
                 }
-
-                
 
                 ////TODO: Create filepaths dir for user
                 //string folderPath = "C:/Users/cl672/Documents/Testing/sampleGallery";

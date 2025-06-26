@@ -83,11 +83,7 @@ namespace Kinect_Photos
                     args.OldSensor.DepthStream.Disable();
                     args.OldSensor.SkeletonStream.Disable();
                 }
-                catch (InvalidOperationException)
-                {
-                    // KinectSensor might enter an invalid state while enabling/disabling streams or stream features.
-                    // E.g.: sensor might be abruptly unplugged.
-                }
+                catch (InvalidOperationException){}
             }
 
             if (args.NewSensor != null)
@@ -104,16 +100,11 @@ namespace Kinect_Photos
                     }
                     catch (InvalidOperationException)
                     {
-                        // Non Kinect for Windows devices do not support Near mode, so reset back to default mode.
                         args.NewSensor.DepthStream.Range = DepthRange.Default;
                         args.NewSensor.SkeletonStream.EnableTrackingInNearRange = false;
                     }
                 }
-                catch (InvalidOperationException)
-                {
-                    // KinectSensor might enter an invalid state while enabling/disabling streams or stream features.
-                    // E.g.: sensor might be abruptly unplugged.
-                }
+                catch (InvalidOperationException){}
             }
         }
     }

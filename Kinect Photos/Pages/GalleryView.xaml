@@ -91,19 +91,7 @@
                 <!--<k:KinectTileButton></k:KinectTileButton>-->
             </ItemsControl>
         </k:KinectScrollViewer>
-        
-        <!-- DEBUG Panel -->
-        <Grid Height="100
-              " VerticalAlignment="Top" HorizontalAlignment="Left">
-            <Grid.RowDefinitions>
-                <RowDefinition/>
-                <RowDefinition/>
-            </Grid.RowDefinitions>
-            <Label x:Name="DEBUGcurUserName" Grid.Row="0">USERNAME</Label>
-            <Label x:Name="DEBUGuserID" Grid.Row="1">USERID</Label>
-        </Grid>
-
-
+       
         <!-- Menu Button! -->
         <k:KinectCircleButton x:Name="menuBtn" HorizontalAlignment="Right" VerticalAlignment="Bottom" Width="120" Height="120" Grid.Row="5" FontSize="72" FontWeight="Normal" ContentForeground="Black" Foreground="#7F000000" Content="☰" Background="{x:Null}" Panel.ZIndex="5" Click="MenuBtn_Click"/>
 
