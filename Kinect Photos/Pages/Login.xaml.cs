@@ -1,6 +1,7 @@
 ﻿using Dapper;
 using Kinect_Photos.models;
 using Kinect_Photos.Pages;
+using Kinect_Photos.Pages.Gallery;
 using Microsoft.Kinect.Toolkit.Controls;
 using System;
 using System.Collections.Generic;
@@ -74,7 +75,7 @@ namespace Kinect_Photos
                 profileTile.Click += (sender, args) =>
                 {
                     MainWindow.setUserID(profile.userID);
-                    NavigationService.Navigate(new GalleryView());
+                    NavigationService.Navigate(new Gallery());
                 };
                 
                 //Label

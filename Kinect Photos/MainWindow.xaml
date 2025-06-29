@@ -10,7 +10,7 @@
 
     <Grid>
         <k:KinectRegion Grid.Row="1" x:Name="kinectRegion">
-            <Frame Source="Pages/Login.xaml" NavigationUIVisibility="Hidden"/>
+            <Frame Source="Pages/Login.xaml" NavigationUIVisibility="Hidden" x:Name="mainFrame"/>
         </k:KinectRegion>
 
         <Grid x:Name="kinectUserPanel" Width="160" Height="100" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,15,15,0">

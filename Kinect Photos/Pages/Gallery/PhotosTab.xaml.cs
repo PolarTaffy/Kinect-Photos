@@ -26,73 +26,19 @@ using static System.Net.WebRequestMethods;
 namespace Kinect_Photos
 {
     /// <summary>
-    /// Interaction logic for GalleryView.xaml
+    /// Interaction logic for PhotosTab.xaml
     /// </summary>
-    public partial class GalleryView : Page
+    public partial class PhotosTab : Page
     {
-        public GalleryView()
+        public PhotosTab()
         {
             InitializeComponent();
-            DebugInit();
             LoadGalleryImages();
             //TODO: Save user's last scroll position
-            HandleTopMenuVisibility();
 
         }
 
-        private void DebugInit()
-        {
-            DEBUGuserID.Content = MainWindow.getUserID();
-        }
-
-        private void MenuBtn_Click(object sender, RoutedEventArgs e) { OverlayPanel.Visibility = Visibility.Visible; }
-
-        private void OverlayPanel_Click(object sender, RoutedEventArgs e) { OverlayPanel.Visibility = Visibility.Collapsed; }
-
-        private void SignOutButton_Click(object sender, RoutedEventArgs e)
-        {
-            // TODO: Implement Sign Out logic
-            MessageBox.Show("Sign Out button clicked!"); 
-            OverlayPanel.Visibility = Visibility.Collapsed;
-            MainWindow.setUserID(-1);
-            NavigationService.Refresh();
-            //NavigationService.Navigate(new GalleryView());
-            NavigationService.Navigate(new Login());
-        }
-
-        private void SettingsButton_Click(object sender, RoutedEventArgs e)
-        {
-            // TODO: Implement Settings navigation or logic
-            MessageBox.Show("Settings button clicked!"); 
-            OverlayPanel.Visibility = Visibility.Collapsed; 
-        }
-
-        private void CustomizationButton_Click(object sender, RoutedEventArgs e)
-        {
-            // TODO: Implement Customization navigation or logic
-            MessageBox.Show("Customization button clicked!"); 
-            OverlayPanel.Visibility = Visibility.Collapsed; 
-        }
-
-        private void HandleTopMenuVisibility()
-        {
-            //we're gonna track the handpointer position and see if it's on the top half
-            HandPointer pt = MainWindow.getHandPointer();
-
-            DispatcherTimer handPosTimer = new DispatcherTimer();
-            handPosTimer.Interval = TimeSpan.FromMilliseconds(100);
-            handPosTimer.Tick += (sender, args) =>
-            {
-                pt.GetPosition(this);
-                //Handle Menu Visibility
-                Point menuPos = pt.GetPosition(menuBtn);
-                if (!(menuPos.X >= 0 && menuPos.X <= menuBtn.ActualWidth && menuPos.Y >= 0 && menuPos.Y <= menuBtn.ActualHeight))
-                {
-                    //pointer isn't on menu
-                }
-            };
-
-        }
+        
 
         private void LoadGalleryImages() //For large galleries, this takes a while... consider segmenting this in the future where it generates more as you scroll?
         { //Also, have images saved or organized by date?
@@ -146,7 +92,7 @@ namespace Kinect_Photos
 
                     button.Click += (sender, args) =>
                     {
-                        NavigationService.Navigate(new imageView(imgsrc, "hello"));
+                        MainWindow.Navigate(new imageView(imgsrc, "hello"));
                     };
                     button.Margin = new Thickness(0);
 

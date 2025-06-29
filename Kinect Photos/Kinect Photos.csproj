@@ -129,6 +129,9 @@
     <Compile Include="Pages\createUser\SetDirectories.xaml.cs">
       <DependentUpon>SetDirectories.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\Gallery\Gallery.xaml.cs">
+      <DependentUpon>Gallery.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\imageView.xaml.cs">
       <DependentUpon>imageView.xaml</DependentUpon>
     </Compile>
@@ -145,11 +148,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\Gallery\Gallery.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\imageView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\GalleryView.xaml">
+    <Page Include="Pages\Gallery\PhotosTab.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -165,8 +172,8 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Pages\GalleryView.xaml.cs">
-      <DependentUpon>GalleryView.xaml</DependentUpon>
+    <Compile Include="Pages\Gallery\PhotosTab.xaml.cs">
+      <DependentUpon>PhotosTab.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\Login.xaml.cs">
       <DependentUpon>Login.xaml</DependentUpon>

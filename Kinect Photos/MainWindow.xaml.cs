@@ -33,6 +33,7 @@ namespace Kinect_Photos
         public InteractionStream interactionStream;
         private static KinectRegion curKinectRegion;
         private static int CUR_USER_ID;
+        private static Frame contentFrame;
 
         public MainWindow()
         {
@@ -47,6 +48,7 @@ namespace Kinect_Photos
             sensorChooser.Start();
 
             curKinectRegion = this.kinectRegion;
+            contentFrame = this.mainFrame;
 
             // Bind the sensor chooser's current sensor to the KinectRegion
             var regionSensorBinding = new Binding("Kinect") { Source = sensorChooser };
@@ -55,6 +57,11 @@ namespace Kinect_Photos
             //Database init
             if (!File.Exists("kinectPhotos.db")) { SQLiteConnection.CreateFile("kinectPhotos.db"); }
             DatabaseHelper.initializeDatabase();
+        }
+
+        public static void Navigate(Page page)
+        {
+            contentFrame.Navigate(page);
         }
 
         public static int getUserID()
