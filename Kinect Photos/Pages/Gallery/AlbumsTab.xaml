@@ -1,29 +1,27 @@
-﻿<Page x:Class="Kinect_Photos.PhotosTab"
+﻿<Page x:Class="Kinect_Photos.Pages.Gallery.AlbumsTab"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Kinect_Photos.Pages.Gallery"
       xmlns:k="http://schemas.microsoft.com/kinect/2013"
-      xmlns:local="clr-namespace:Kinect_Photos"
       mc:Ignorable="d" 
       d:DesignHeight="720" d:DesignWidth="1280"
-      Title="PhotosTab">
-    
+      Title="AlbumsTab">
 
     <Grid Background="White">
-        <!-- Photo Grid (Busted & Broken) -->
         <k:KinectScrollViewer VerticalScrollBarVisibility="Hidden"
-                              Width="Auto" Height="Auto">
-            <ItemsControl x:Name="imageContainer" VerticalAlignment="Top">
+                      Width="Auto" Height="Auto">
+            <ItemsControl x:Name="albumContainer" VerticalAlignment="Top">
                 <ItemsControl.ItemsPanel>
                     <ItemsPanelTemplate>
-                        <UniformGrid x:Name="imageGrid" Columns="7" />
+                        <WrapPanel/>
                     </ItemsPanelTemplate>
                 </ItemsControl.ItemsPanel>
 
                 <!--<k:KinectTileButton></k:KinectTileButton>-->
             </ItemsControl>
         </k:KinectScrollViewer>
-       
+
     </Grid>
 </Page>
